@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleFox | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="font-poppins">
+    <header class="relative">
+        <!-- Announcement Banner -->
+        <div class="bg-gradient-to-r from-slate-700 to-slate-600 py-3 relative overflow-hidden">
+            <div class="flex items-center justify-center gap-2 text-white">
+                <p class="text-sm">
+                    Sign up and <span class="font-semibold">GET 20% OFF</span> your first order.
+                    <a href="#" class="text-sm font-semibold hover:text-slate-200 transition-colors duration-300 underline underline-offset-2">
+                        Sign up now
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex items-center justify-between px-[8%] py-4 bg-white shadow-sm">
+            <a href="/" class="block hover:opacity-90 transition-opacity duration-300">
+                <img class="w-[100px]" src="/assets/icon/logo.png" alt="StyleFox Logo">
+            </a>
+
+            <ul class="flex items-center gap-8">
+                <li>
+                    <a href="/index.html"
+                        class="text-sm font-medium text-slate-800 hover:text-slate-600 transition-colors duration-300 relative group">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-800 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="catalog.html"
+                        class="text-sm font-medium text-slate-800 hover:text-slate-600 transition-colors duration-300 relative group">
+                        Catalog
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-800 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="About.html"
+                        class="text-sm font-medium text-slate-800 hover:text-slate-600 transition-colors duration-300 relative group">
+                        About
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-800 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="text-sm font-medium text-slate-800 hover:text-slate-600 transition-colors duration-300 relative group">
+                        Contact
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-800 group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </li>
+
+                <li class="flex items-center gap-6 ml-8">
+                    <button class="relative group hover:scale-110 transition-transform duration-300">
+                        <img class="size-6" src="/assets/icon/cart.svg" alt="Shopping Cart">
+                        <span
+                            class="absolute -top-2 -right-2 bg-slate-700 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </button>
+
+                    <button class="hover:scale-110 transition-transform duration-300">
+                        <img class="size-6" src="/assets/icon/user.svg" alt="User Account">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+</body>
+
+</html>
