@@ -8,7 +8,7 @@
 </head>
 <body>
   <!-- Modal backdrop -->
-<div class="fixed inset-0 z-50 overflow-hidden">
+<div id="shopping" class="fixed inset-0 z-50 overflow-hidden">
   <!-- Dark overlay -->
   <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity"></div>
   
@@ -24,7 +24,7 @@
             <div class="bg-black px-4 py-6 sm:px-6">
               <div class="flex items-center justify-between">
                 <h2 class="text-lg font-medium text-white">Shopping Cart</h2>
-                <button class="text-white hover:text-gray-300">
+                <button id="closeShopping" class="text-white hover:text-gray-300">
                   <span class="sr-only">Close panel</span>
                   <!-- X icon -->
                   <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -103,6 +103,6 @@
     </div>
   </div>
 </div>
-
+<script src="../js/panier.js"></script>
 </body>
 </html>
