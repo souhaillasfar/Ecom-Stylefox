@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- <link rel="stylesheet" href="style.css"> -->
         <link rel="stylesheet" href="./../css/output.css">
-    <title>Document</title>
+    <title>StyleFox</title>
 </head>
 <body>
     <header>
@@ -26,59 +26,91 @@
         </nav>
     </header>
 
-    <section class="font-poppins mt-6">
-        <form class=" border border-black w-80 pl-8 ml-2">
+    <section class="font-poppins mt-6 flex gap-32 pb-3">
+        <form class=" border border-black w-80 h-full pl-8 ml-2">
             <div>
-                <h3 class="text-black mt-2 font-bold ">Categories</h3>
+                <h3 class="text-black mt-2 font-bold ">Categories  <i class=" ml-8 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
                 <ul>
-                    <li class="mt-2">Women <i class="fa-solid fa-chevron-down" style="color: #808080;"></i></li>
+                    <li class="mt-2">Women <i class=" ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></li>
                     <ul class="ml-4">
-                        <li>Dresses</li>
-                        <li>Tops</li>
-                        <li>Skirts</li>
+                        <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">Dresses</li>
+                        <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">Tops</li>
+                        <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">Skirts</li>
                     </ul>
-                    <li class="mt-2">Men <i class="fa-solid fa-chevron-down" style="color: #808080;"></i></li>
+                    <li class="mt-2">Men <i class="ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></li>
                     <ul class="ml-4">
-                        <li>T-shirts</li>
-                        <li>Jackets</li>
-                        <li>Jeans</li>
-                        <li>Hoodies</li>
+                        <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">T-shirts</li>
+                        <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">Jackets</li>
+                        <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">Jeans</li>
+                        <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">Hoodies</li>
                     </ul>
-                    <li class="mt-2">Kids <i class="fa-solid fa-chevron-down" style="color: #808080;"></i></li>
+                    <li class="mt-2">Kids <i class="ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></li>
                     <ul class="ml-4">
-                        <li>T-shirts</li>
-                        <li>Shorts</li>
-                        <li>Sweaters</li>
+                        <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">T-shirts</li>
+                        <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">Shorts</li>
+                        <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">Sweaters</li>
                     </ul>
                 </ul>
             </div>
         
             <div class="product-size">
-                <h3 class="mt-2">Size <i class="fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
+                <h3 class="mt-2">Size <i class=" ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
                 <ul class="ml-4">
-                    <li>S</li>
-                    <li>M</li>
-                    <li>L</li>
-                    <li>XL</li>
+                    <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">S</li>
+                    <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">M</li>
+                    <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">L</li>
+                    <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">XL</li>
                 </ul>
             </div>
         
             <div class="product-price">
-                <h3 class="mt-2">Price <i class="fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
+                <h3 class="mt-2  ">Price <i class="ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
                 <ul class="ml-4">
-                    <li>Low Price</li>
-                    <li>High Price</li>
+                    <li class="bg-slate-300 w-40 border border-black border-x-0 border-t-0">Low Price</li>
+                    <li class="mb-2 bg-slate-300 w-40 border border-black border-x-0 border-t-0">High Price</li>
                 </ul>
             </div>
         </form>
-        <form >
-        <div class="carte">
+        <form class="grid grid-cols-3 gap-11 gap-y-4">
+        <div class="border border-black w-52">
             <img src="/assets/images/Jeans de printemps.png" alt="Image produit" class="image">
-            <div class="details">
-                <h2 class="titre">Titre du produit</h2>
-                <p class="couleurs">Nombre de couleurs : <span>3</span></p>
-                <p class="prix">Prix : <span>€ 25.99</span></p>
+            <div class="flex gap-12 p-2 ">
+                <div class="">
+                <h2 class="font-poppins">Title</h2>
+                <p class="text-gray-500 mt-10">Colors : <span>3</span></p>
+                </div>
+                 <span class="font-bold mt-6">$25.99</span>
             </div>
+        </div>
+            <div class="border border-black w-52">
+                <img src="/assets/images/Jeans de printemps.png" alt="Image produit" class="image">
+                <div class="flex gap-12 p-2 ">
+                    <div>
+                    <h2 class="font-poppins">Title</h2>
+                    <p class="text-gray-500 mt-10">Colors : <span>3</span></p>
+                    </div>
+                     <span class="font-bold mt-6">$25.99</span>
+                </div>
+            </div>
+                <div class="border border-black w-52">
+                    <img src="/assets/images/Jeans de printemps.png" alt="Image produit" class="image">
+                    <div class="flex gap-12 p-2 ">
+                        <div>
+                        <h2 class="font-poppins">Title</h2>
+                        <p class="text-gray-500 mt-10">Colors : <span>3</span></p>
+                        </div>
+                         <span class="font-bold mt-6">$25.99</span>
+                    </div>
+                </div>
+                    <div class="border border-black w-52">
+                        <img src="/assets/images/Jeans de printemps.png" alt="Image produit" class="image">
+                        <div class="flex gap-12 p-2 ">
+                            <div>
+                            <h2 class="font-poppins">Title</h2>
+                            <p class="text-gray-500 mt-10">Colors : <span>3</span></p>
+                            </div>
+                             <span class="font-bold mt-6">$25.99</span>
+                        </div>
         </div>
         </form>
     </section>

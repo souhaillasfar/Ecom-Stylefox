@@ -556,24 +556,8 @@ video {
   display: none;
 }
 
-.ml-9{
-  margin-left: 2.25rem;
-}
-
 .ml-2{
   margin-left: 0.5rem;
-}
-
-.ml-20{
-  margin-left: 5rem;
-}
-
-.mt-2{
-  margin-top: 0.5rem;
-}
-
-.mt-6{
-  margin-top: 1.5rem;
 }
 
 .ml-4{
@@ -584,20 +568,32 @@ video {
   margin-left: 2rem;
 }
 
-.ml-10{
-  margin-left: 2.5rem;
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.mt-6{
+  margin-top: 1.5rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
 }
 
 .mt-8{
   margin-top: 2rem;
 }
 
-.mr-8{
-  margin-right: 2rem;
-}
-
-.mr-2{
-  margin-right: 0.5rem;
+.mt-1{
+  margin-top: 0.25rem;
 }
 
 .flex{
@@ -608,26 +604,6 @@ video {
   display: grid;
 }
 
-.h-3{
-  height: 0.75rem;
-}
-
-.h-2{
-  height: 0.5rem;
-}
-
-.h-4{
-  height: 1rem;
-}
-
-.h-6{
-  height: 1.5rem;
-}
-
-.h-7{
-  height: 1.75rem;
-}
-
 .h-10{
   height: 2.5rem;
 }
@@ -636,68 +612,68 @@ video {
   height: 3rem;
 }
 
-.h-1{
-  height: 0.25rem;
+.h-7{
+  height: 1.75rem;
 }
 
-.h-3\/4{
-  height: 75%;
+.h-96{
+  height: 24rem;
 }
 
-.w-full{
-  width: 100%;
+.h-full{
+  height: 100%;
 }
 
 .w-80{
   width: 20rem;
 }
 
-.w-20{
-  width: 5rem;
+.w-full{
+  width: 100%;
 }
 
-.w-52{
-  width: 13rem;
+.w-32{
+  width: 8rem;
+}
+
+.w-3{
+  width: 0.75rem;
+}
+
+.w-40{
+  width: 10rem;
+}
+
+.w-60{
+  width: 15rem;
 }
 
 .w-5{
   width: 1.25rem;
 }
 
-.max-w-8{
-  max-width: 2rem;
+.w-52{
+  width: 13rem;
 }
 
-.max-w-80{
-  max-width: 20rem;
+.w-4{
+  width: 1rem;
 }
 
-.max-w-9{
-  max-width: 2.25rem;
-}
-
-.max-w-96{
-  max-width: 24rem;
-}
-
-.max-w-1{
-  max-width: 0.25rem;
-}
-
-.max-w-lg{
-  max-width: 32rem;
+.w-48{
+  width: 12rem;
 }
 
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.items-center{
-  align-items: center;
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.justify-end{
-  justify-content: flex-end;
+.items-center{
+  align-items: center;
 }
 
 .justify-center{
@@ -708,24 +684,86 @@ video {
   justify-content: space-between;
 }
 
-.justify-around{
-  justify-content: space-around;
-}
-
-.gap-2{
-  gap: 0.5rem;
-}
-
 .gap-6{
   gap: 1.5rem;
 }
 
-.rounded-lg{
-  border-radius: 0.5rem;
+.gap-4{
+  gap: 1rem;
+}
+
+.gap-1{
+  gap: 0.25rem;
+}
+
+.gap-11{
+  gap: 2.75rem;
+}
+
+.gap-10{
+  gap: 2.5rem;
+}
+
+.gap-20{
+  gap: 5rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
+}
+
+.gap-32{
+  gap: 8rem;
+}
+
+.gap-5{
+  gap: 1.25rem;
+}
+
+.gap-8{
+  gap: 2rem;
+}
+
+.gap-12{
+  gap: 3rem;
+}
+
+.gap-y-2{
+  row-gap: 0.5rem;
+}
+
+.gap-y-4{
+  row-gap: 1rem;
+}
+
+.gap-y-6{
+  row-gap: 1.5rem;
+}
+
+.gap-y-3{
+  row-gap: 0.75rem;
 }
 
 .border{
   border-width: 1px;
+}
+
+.border-x{
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+
+.border-x-0{
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+
+.border-t-0{
+  border-top-width: 0px;
+}
+
+.border-b{
+  border-bottom-width: 1px;
 }
 
 .border-black{
@@ -733,30 +771,36 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.border-zinc-950{
-  --tw-border-opacity: 1;
-  border-color: rgb(9 9 11 / var(--tw-border-opacity));
-}
-
-.bg-\[\]{
-  background-color: ;
-}
-
-.bg-\[\#\]{
-  background-color: #;
-}
-
 .bg-\[\#1D242D\]{
   --tw-bg-opacity: 1;
   background-color: rgb(29 36 45 / var(--tw-bg-opacity));
 }
 
-.p-5{
-  padding: 1.25rem;
+.bg-slate-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.bg-slate-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.p-2{
+  padding: 0.5rem;
 }
 
 .pl-8{
   padding-left: 2rem;
+}
+
+.pb-3{
+  padding-bottom: 0.75rem;
 }
 
 .font-poppins{
@@ -767,21 +811,17 @@ video {
   font-weight: 700;
 }
 
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[\]{
-  color: ;
-}
-
-.text-\[\#333333\]{
+.text-gray-500{
   --tw-text-opacity: 1;
-  color: rgb(51 51 51 / var(--tw-text-opacity));
-}
-
-.text-black{
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
