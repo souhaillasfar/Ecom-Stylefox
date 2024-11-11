@@ -556,11 +556,56 @@ video {
   display: none;
 }
 
-.text-\[100px\]{
-  font-size: 100px;
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 36 45 / var(--tw-bg-opacity));
 }
 
-.text-red-400{
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.font-poppins{
+  font-family: Poppins, serif;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-medium{
+  font-weight: 500;
+}
+
+.font-semibold{
+  font-weight: 600;
+}
+
+.text-white{
   --tw-text-opacity: 1;
-  color: rgb(248 113 113 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[\]{
+  color: ;
+}
+
+.underline{
+  text-decoration-line: underline;
 }
