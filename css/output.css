@@ -556,8 +556,41 @@ video {
   display: none;
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .ml-8{
   margin-left: 2rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.ml-auto{
+  margin-left: auto;
+}
+
+.mt-6{
+  margin-top: 1.5rem;
+}
+
+.mt-14{
+  margin-top: 3.5rem;
+}
+
+.mt-20{
+  margin-top: 5rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.block{
+  display: block;
 }
 
 .flex{
@@ -569,8 +602,43 @@ video {
   height: 1.25rem;
 }
 
+.size-\[2\E0px\]{
+  width: 2àpx;
+  height: 2àpx;
+}
+
+.size-\[20px\]{
+  width: 20px;
+  height: 20px;
+}
+
+.min-h-\[500px\]{
+  min-height: 500px;
+}
+
 .w-\[80px\]{
   width: 80px;
+}
+
+.w-fit{
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-\[1px\]{
+  width: 1px;
+}
+
+.max-w-\[\]{
+  max-width: ;
+}
+
+.max-w-\[60\%\]{
+  max-width: 60%;
+}
+
+.max-w-\[70\%\]{
+  max-width: 70%;
 }
 
 .items-center{
@@ -585,9 +653,51 @@ video {
   gap: 1rem;
 }
 
+.rounded-md{
+  border-radius: 0.375rem;
+}
+
+.rounded-l-md{
+  border-top-left-radius: 0.375rem;
+  border-bottom-left-radius: 0.375rem;
+}
+
+.rounded-r-md{
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+}
+
 .bg-primary{
   --tw-bg-opacity: 1;
   background-color: rgb(29 36 45 / var(--tw-bg-opacity));
+}
+
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-\[D9D9D9\]{
+  background-color: D9D9D9;
+}
+
+.bg-\[\#D9D9D9\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
+}
+
+.p-4{
+  padding: 1rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .px-\[8\%\]{
@@ -603,6 +713,36 @@ video {
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.px-\[\]{
+  padding-left: ;
+  padding-right: ;
+}
+
+.px-\[14px\]{
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.py-\[\]{
+  padding-top: ;
+  padding-bottom: ;
+}
+
+.py-\[6px\]{
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.px-\[12px\]{
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .text-center{
@@ -623,6 +763,18 @@ video {
   line-height: 1rem;
 }
 
+.text-\[60px\]{
+  font-size: 60px;
+}
+
+.text-\[40px\]{
+  font-size: 40px;
+}
+
+.text-\[50px\]{
+  font-size: 50px;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -634,4 +786,13 @@ video {
 
 .navshdaow{
   box-shadow: 0 0 4px #00000025;
+}
+
+.headerbg{
+  background-image: url('./../assets/images/headerbg1.webp');
+  background-color: #00000052;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
