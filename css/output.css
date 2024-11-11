@@ -556,11 +556,82 @@ video {
   display: none;
 }
 
-.text-\[100px\]{
-  font-size: 100px;
+.ml-8{
+  margin-left: 2rem;
 }
 
-.text-red-400{
+.flex{
+  display: flex;
+}
+
+.size-5{
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.w-\[80px\]{
+  width: 80px;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.gap-4{
+  gap: 1rem;
+}
+
+.bg-primary{
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 36 45 / var(--tw-bg-opacity));
+}
+
+.px-\[8\%\]{
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.font-poppins{
+  font-family: Poppins, serif;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-semibold{
+  font-weight: 600;
+}
+
+.text-white{
   --tw-text-opacity: 1;
-  color: rgb(248 113 113 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.navshdaow{
+  box-shadow: 0 0 4px #00000025;
 }

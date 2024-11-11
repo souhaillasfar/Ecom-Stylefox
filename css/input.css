@@ -2,3 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navshdaow{
+    box-shadow: 0 0 4px #00000025;
+}
