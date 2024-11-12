@@ -1,0 +1,62 @@
+
+[
+    {
+      "id": 1,
+      "name": "Men",
+      "subcategories":[
+        { 
+            "id": 1,
+            "name": "T-Shirts"
+        },
+        {
+            "id": 2,
+            "name": "Jackets"
+          },
+          {
+            "id": 3,
+            "name": "Jeans"
+          },
+      ]
+     
+    },
+    {
+      "id": 2,
+      "name": "Women",
+      "subcategories":[
+        {
+            "id": 4,
+            "name": "Dresses"
+          },
+          {
+            "id": 5,
+            "name": "Tops"
+          },
+          {
+            "id": 6,
+            "name": "Skirts"
+          },
+        
+      ]
+
+    },
+    {
+      "id": 3,
+      "name": "Kids",
+      "subcategories":[
+        {
+            "id": 7,
+            "name": "T-Shirts"
+          },
+          {
+            "id": 8,
+            "name": "Shorts"
+          },
+          {
+            "id": 9,
+            "name": "Sweaters"
+          }
+
+      ]
+    }
+  ] 
+  
