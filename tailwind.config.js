@@ -12,14 +12,15 @@ module.exports = {
         'lg': '1024px',
         'xl': '1280px'
       },
-      fontFamily:{
-        poppins: ["Poppins", "serif"]
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif']
       },
       colors: {
         primary: '#1D242D'
+
+
       }
     },
   },
   plugins: [],
 }
-
