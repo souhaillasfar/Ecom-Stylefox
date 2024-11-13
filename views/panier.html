@@ -34,55 +34,80 @@
               </div>
             </div>
 
-            <!-- Cart items -->
+            <!-- item -->
+            <!-- Cart Container -->
+           <div class="shopping-list">
             <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+              
+              <!-- Cart Items Container -->
               <div class="details">
-                              <!-- Item -->
-              <div class="flex items-center justify-between border-b border-gray-200 pb-6">
-                <div class="flex items-center space-x-4">
-                  <img src="../assets/images/products-73-600x820 1.png" alt="Product image" class="h-40 w-25 object-cover rounded-md">
-                  <div>
-                    <h class="text-base font-medium text-gray-900">River Jacket - Black, L</h3>
-
-                <div class="quantityandprice flex items-center space-x-4 mt-4">
-
-
-                      <!-- Quantity controls -->
-                      <div class="flex items-center border rounded-full ">
-                        <button id="minus" class="px-3 py-1 hover:bg-gray-100 rounded-l-full">
-                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
-                          </svg>
-                        </button>
-                        <span id="num" class="px-4 py-1">1</span>
-                        <button id="plus" class="px-3 py-1 hover:bg-gray-100 rounded-r-full">
-                          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
-                          </svg>
-                        </button></div>
-
-
-                      <div class="flex flex-col items-end space-y-2">
-                        <span class="text-base font-medium text-gray-900 ml-5">$115.00</span>
+                
+                <!-- Cart Item -->
+                <div class="cart-item flex items-center justify-between border-b border-gray-200 pb-6">
+                  
+                  <!-- Product Image and Details -->
+                  <div class="flex items-center space-x-4">
+                    
+                    <!-- Product Image -->
+                    <img src="../assets/images/products-73-600x820 1.png" alt="Product image" class="h-40 w-25 object-cover rounded-md">
+                    
+                    <!-- Product Details -->
+                    <div>
+                      
+                      <!-- Product Name -->
+                      <h3 class="text-base font-medium text-gray-900">River Jacket - Black, L</h3>
+                      
+                      <!-- Quantity and Price -->
+                      <div class="quantityandprice flex items-center space-x-4 mt-4">
+                        
+                        <!-- Quantity Controls -->
+                        <div class="flex items-center border rounded-full">
+                          <button id="minus" class="px-3 py-1 hover:bg-gray-100 rounded-l-full">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                            </svg>
+                          </button>
+                          <span id="num" class="px-4 py-1">1</span>
+                          <button id="plus" class="px-3 py-1 hover:bg-gray-100 rounded-r-full">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                            </svg>
+                          </button>
+                        </div>
+                        
+                        <!-- Price Display -->
+                        <div class="flex flex-col items-end space-y-2">
+                          <span class="text-base font-medium text-gray-900 ml-5">$115.00</span>
+                        </div>
+                        
                       </div>
-
-
-                </div>
-             
-                    <button class="mt-1 text-sm text-gray-500 ml-3 ">Remove</button>
+                      
+                      <!-- Remove Button -->
+                      <button class="mt-1 text-sm text-gray-500 ml-3">Remove</button>
+                      
+                    </div>
                   </div>
                   
                 </div>
                 
-                
-                
               </div>
-              </div>
+
+              
+
             </div>
-            <div class="flex justify-between text-base font-medium bg-black px-4 py-6 sm:px-6  class="text-white>
-              <p class="text-white">Subtotal</p>
-              <p class="text-white">$115.00</p>
+
+
+           </div>
+            <!-- End item -->
+
+
+            <!-- Subtotal Section -->
+            <div class="subtotal flex justify-between text-base font-medium bg-black px-4 py-6 sm:px-6 text-white">
+              <p>Subtotal</p>
+              <p>$115.00</p>
             </div>
+
+
             <!-- Footer -->
             <div class="mt-48 border-t border-red-200 px-4 py-6 sm:px-6 bg-black px-4 py-6 sm:px-6">
               <div class="">
