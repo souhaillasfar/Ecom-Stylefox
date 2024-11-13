@@ -2,266 +2,404 @@
 <html lang="fr">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez les dernières tendances mode sur notre site de vêtements en ligne. 
-                                    Une large sélection de vêtements stylés pour hommes et femmes, avec des nouveautés chaque semaine.
-                                    Livraison rapide et retours gratuits !">
+
+    <meta name="description"
+        content="Découvrez les dernières tendances mode sur notre site de vêtements en ligne. Une large sélection de vêtements stylés pour hommes et femmes, avec des nouveautés chaque semaine. Livraison rapide et retours gratuits !">
     <meta name="author" content="Abderrahmane AHLALLAY">
-    <meta name="keyword" content="hommes, femmes, vetement, vétement, hoodie, shirt, t-shirt">
-    <title>StyleFox | Détailles</title>
+    <meta name="keywords" content="hommes, femmes, enfant, vetement, vétement, hoodie, shirt, t-shirt, pantalong">
+
+    <title>StyleFox | Détails Produit</title>
+
+    <!-- Ressources externes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Styles personnalisés -->
+    <style>
+        /* Styles pour le skeleton loading */
+        .skeleton {
+            animation: skeleton-loading 1s linear infinite alternate;
+        }
+
+        @keyframes skeleton-loading {
+            0% {
+                background-color: #e5e7eb;
+            }
+
+            100% {
+                background-color: #f3f4f6;
+            }
+        }
+
+        /* Styles pour les transitions */
+        .fade-enter {
+            opacity: 0;
+        }
+
+        .fade-enter-active {
+            opacity: 1;
+            transition: opacity 300ms ease-in;
+        }
+
+        .fade-exit {
+            opacity: 1;
+        }
+
+        .fade-exit-active {
+            opacity: 0;
+            transition: opacity 300ms ease-out;
+        }
+    </style>
 </head>
 
-<body class="font-poppins bg-gray-50">
+<body class="bg-gray-100 font-poppins">
+    <!-- En-tête -->
     <header class="relative">
-        <!-- Announcement Banner -->
-        <div class="bg-gradient-to-r from-slate-700 to-slate-600 py-3">
+        <!-- Bannière promotionnelle -->
+        <div class="bg-slate-500 py-3 hidden sm:block" role="alert" aria-live="polite">
             <div class="flex items-center justify-center gap-2 text-white">
                 <p class="text-sm">
                     Sign up and <span class="font-semibold">GET 20% OFF</span> your first order.
                     <a href="#"
-                        class="text-sm font-semibold hover:text-slate-200 transition-colors duration-300 underline underline-offset-2">
+                        class="text-sm font-semibold hover:text-slate-200 transition-colors duration-300 underline underline-offset-2"
+                        aria-label="Sign up for 20% discount">
                         Sign up now
                     </a>
                 </p>
             </div>
         </div>
 
-        <!-- Navigation -->
-        <nav class="flex items-center justify-between px-[8%] py-4 bg-white shadow-sm sticky top-0 z-50">
-            <a href="/" class="block hover:opacity-90 transition-opacity duration-300">
-                <img class="w-[100px]" src="/assets/icon/logo.png" alt="StyleFox Logo">
+        <!-- Barre de navigation -->
+        <nav class="flex items-center justify-between px-4 md:px-20 py-4 bg-white shadow-sm sticky top-0 z-50"
+            role="navigation">
+            <!-- Logo -->
+            <a href="/" class="block hover:opacity-90 transition-opacity duration-300" aria-label="Retour à l'accueil">
+                <img class="w-[100px] h-auto" src="/assets/icon/logo_black.png" alt="StyleFox Logo" width="100"
+                    height="40" loading="lazy">
             </a>
 
-            <ul class="flex items-center gap-8">
-                <li>
-                    <a href="/index.html"
-                        class="text-sm font-medium text-slate-800 hover:text-slate-600 transition-colors duration-300 relative group">
-                        Home
-                        <span
-                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-800 group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="catalog.html"
-                        class="text-sm font-medium text-slate-800 hover:text-slate-600 transition-colors duration-300 relative group">
-                        Catalog
-                        <span
-                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-800 group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="About.html"
-                        class="text-sm font-medium text-slate-800 hover:text-slate-600 transition-colors duration-300 relative group">
-                        About
-                        <span
-                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-800 group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="text-sm font-medium text-slate-800 hover:text-slate-600 transition-colors duration-300 relative group">
-                        Contact
-                        <span
-                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-800 group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                </li>
+            <!-- Menu principal et hamburger -->
+            <div class="flex items-center gap-6">
+                <!-- Menu hamburger -->
+                <button id="hamburger-btn"
+                    class="sm:hidden flex items-center text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                    aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu principal">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
 
-                <li class="flex items-center gap-6 ml-8">
-                    <button class="relative group hover:scale-110 transition-transform duration-300">
-                        <img class="size-6" src="/assets/icon/cart.svg" alt="Shopping Cart">
-                        <span
-                            class="absolute -top-2 -right-2 bg-slate-700 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"><a
-                                href="">0</a></span>
-                    </button>
+                <!-- Menu principal -->
+                <ul id="nav-menu" class="sm:flex items-center gap-6 md:gap-8 hidden sm:block" role="menubar">
+                    <li role="none"><a href="/index.html"
+                            class="nav-link hover:text-slate-600 transition-colors duration-300"
+                            role="menuitem">Home</a></li>
+                    <li role="none"><a href="catalog.html"
+                            class="nav-link hover:text-slate-600 transition-colors duration-300"
+                            role="menuitem">Catalog</a></li>
+                    <li role="none"><a href="About.html"
+                            class="nav-link hover:text-slate-600 transition-colors duration-300"
+                            role="menuitem">About</a></li>
+                    <li role="none"><a href="#" class="nav-link hover:text-slate-600 transition-colors duration-300"
+                            role="menuitem">Contact</a></li>
 
-                    <button class="hover:scale-110 transition-transform duration-300">
-                        <img class="size-6" src="/assets/icon/user.svg" alt="User Account">
+                    <!-- Icônes utilisateur et panier -->
+                    <li class="flex items-center gap-4 md:gap-6 ml-8" role="none">
+                        <button
+                            class="relative group hover:scale-110 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                            aria-label="Panier d'achat">
+                            <img class="w-6 h-6" src="/assets/icon/cart.svg" alt="" aria-hidden="true">
+                            <span
+                                class="absolute -top-2 -right-2 bg-slate-700 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
+                                aria-label="Nombre d'articles dans le panier">
+                                0
+                            </span>
+                        </button>
+                        <button
+                            class="hover:scale-110 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                            aria-label="Compte utilisateur">
+                            <img class="w-6 h-6" src="/assets/icon/user.svg" alt="" aria-hidden="true">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Menu mobile -->
+            <div id="mobile-menu"
+                class="fixed inset-0 bg-white transform transition-transform duration-300 ease-in-out translate-x-full sm:hidden"
+                role="dialog" aria-modal="true" aria-label="Menu mobile">
+                <div class="p-4">
+                    <button aria-label="Fermer le menu"
+                        class="absolute top-4 right-4 p-2 focus:outline-none focus:ring-2 focus:ring-slate-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
                     </button>
-                </li>
-            </ul>
+                    <ul class="space-y-4 mt-8">
+                        <li><a href="/index.html"
+                                class="block py-2 hover:bg-gray-100 transition-colors duration-300">Home</a></li>
+                        <li><a href="catalog.html"
+                                class="block py-2 hover:bg-gray-100 transition-colors duration-300">Catalog</a></li>
+                        <li><a href="About.html"
+                                class="block py-2 hover:bg-gray-100 transition-colors duration-300">About</a></li>
+                        <li><a href="#" class="block py-2 hover:bg-gray-100 transition-colors duration-300">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
+    <!-- Contenu principal -->
     <main class="container mx-auto px-4 py-8">
-
-        <section class="bg-white">
+        <!-- Section détails produit -->
+        <section class="bg-white rounded-xl shadow-lg p-6" aria-label="Détails du produit">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Product Images Section -->
+                <!-- Galerie d'images -->
                 <div class="space-y-4">
+                    <!-- Image principale -->
                     <div class="aspect-square bg-white rounded-xl overflow-hidden shadow-sm">
-                        <img src="/assets/images/about-img33.png" alt="Cat&Dog Hoodie"
-                            class="w-full h-full object-cover">
+                        <img src="/assets/images/about-img33.png" alt="Cat&Dog Hoodie - Vue principale"
+                            class="w-full h-full object-cover" width="600" height="600" id="main-product-image"
+                            loading="eager">
                     </div>
-                    <div class="grid grid-cols-4 gap-4">
+
+                    <!-- Miniatures -->
+                    <div class="grid grid-cols-4 gap-4" role="region" aria-label="Galerie de photos du produit">
                         <button
-                            class="aspect-square bg-white rounded-lg overflow-hidden hover:ring-2 ring-slate-700 transition-all shadow-sm">
-                            <img src="/assets/images/about-img33.png" alt="Hoodie view 1"
-                                class="w-full h-full object-cover">
+                            class="product-thumbnail transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                            onclick="updateMainImage(this)" aria-label="Voir la vue 1">
+                            <img src="/assets/images/about-img33.png" alt="" class="w-20 h-20 object-cover rounded"
+                                loading="lazy" width="80" height="80">
                         </button>
                         <button
-                            class="aspect-square bg-white rounded-lg overflow-hidden hover:ring-2 ring-slate-700 transition-all shadow-sm">
-                            <img src="/assets/images/about-img77.png" alt="Hoodie view 2"
-                                class="w-full h-full object-cover">
+                            class="product-thumbnail transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                            onclick="updateMainImage(this)" aria-label="Voir la vue 2">
+                            <img src="/assets/images/about-img77.png" alt="" class="w-20 h-20 object-cover rounded"
+                                loading="lazy" width="80" height="80">
                         </button>
                         <button
-                            class="aspect-square bg-white rounded-lg overflow-hidden hover:ring-2 ring-slate-700 transition-all shadow-sm">
-                            <img src="/assets/images/about2.jpg" alt="Hoodie view 3" class="w-full h-full object-cover">
+                            class="product-thumbnail transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                            onclick="updateMainImage(this)" aria-label="Voir la vue 3">
+                            <img src="/assets/images/about2.jpg" alt="" class="w-20 h-20 object-cover rounded"
+                                loading="lazy" width="80" height="80">
                         </button>
                         <button
-                            class="aspect-square bg-white rounded-lg overflow-hidden hover:ring-2 ring-slate-700 transition-all shadow-sm">
-                            <img src="/assets/images/about6.png" alt="Hoodie view 4" class="w-full h-full object-cover">
+                            class="product-thumbnail transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                            onclick="updateMainImage(this)" aria-label="Voir la vue 4">
+                            <img src="/assets/images/about6.png" alt="" class="w-20 h-20 object-cover rounded"
+                                loading="lazy" width="80" height="80">
                         </button>
                     </div>
                 </div>
 
-                <!-- Product Info Section -->
+                <!-- Informations produit -->
                 <div class="space-y-8">
+                    <!-- En-tête produit -->
                     <div>
                         <h1 class="text-3xl font-bold mb-2">Cat&Dog Hoodie</h1>
+                        <!-- Note et avis -->
                         <div class="flex items-center space-x-2 mb-4">
-                            <div class="text-yellow-400">★★★★☆</div>
+                            <div class="text-yellow-400" aria-label="4 étoiles sur 5">★★★★☆</div>
                             <span class="text-gray-500">(4.0)</span>
-                            <a href="#reviews" class="text-sm text-slate-600 hover:text-slate-800 underline ml-2">42
-                                reviews</a>
+                            <a href="#reviews"
+                                class="text-sm text-slate-600 hover:text-slate-800 transition-colors duration-300 underline ml-2"
+                                aria-label="Voir les 42 avis">
+                                42 avis
+                            </a>
                         </div>
+                        <!-- Prix -->
                         <div class="flex items-baseline space-x-3">
-                            <span class="text-3xl font-bold text-green-600">$50.00</span>
-                            <span class="text-lg text-gray-500 line-through">$75.00</span>
-                            <span class="text-sm font-semibold text-red-600">25% OFF</span>
+                            <span class="text-3xl font-bold text-green-600" aria-label="Prix actuel">50.00 $</span>
+                            <span class="text-lg text-gray-500 line-through" aria-label="Prix initial">75.00 $</span>
+                            <span class="text-sm font-semibold bg-slate-200 text-red-600 rounded px-2">25% OFF</span>
                         </div>
                     </div>
 
+                    <!-- Options de sélection -->
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-4">
+                        <!-- Taille -->
+                        <div class="w-full md:w-auto">
+                            <label for="size" class="block font-semibold mb-2">Taille:</label>
+                            <select id="size"
+                                class="product-size-selector w-full md:w-auto rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                                aria-label="Sélectionner la taille">
+                                <option value="">Choisir la taille</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
 
-                    <div class="flex justify-around">
-                        <!-- Size Selection -->
-                        <Select class="font-semibold mb-3 rounded">
-                            <option class="font-normal mb-3">Select Size</option>
-                            <option value="very small">XS</option>
-                            <option value="small">S</option>
-                            <option value="medium">M</option>
-                            <option value="large">L</option>
-                            <option value="medium large">XL</option>
-                            <option value="very large">XXL</option>
-                        </Select>
+                        <!-- Couleur -->
+                        <div class="w-full md:w-auto">
+                            <label for="color" class="block font-semibold mb-2">Couleur:</label>
+                            <select id="color"
+                                class="product-color-selector w-full md:w-auto rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                                aria-label="Sélectionner la couleur">
+                                <option value="">Choisir la couleur</option>
+                                <option value="blue" class="bg-blue-500 text-white">Bleu</option>
+                                <option value="red" class="bg-red-500 text-white">Rouge</option>
+                                <option value="black" class="bg-black text-white">Noir</option>
+                                <option value="gray" class="bg-gray-500 text-white">Gris</option>
+                            </select>
+                        </div>
 
-                        <!-- Color Selection -->
-                        <Select>
-                            <option value="" class="font-semibold mb-3">Select Color</option>
-                            <option class="bg-blue-500 text-white">Blue</option>
-                            <option class="bg-red-500 text-white">Red</option>
-                            <option class="bg-black text-white">Black</option>
-                            <option class="bg-white">White</option>
-                            <option class="bg-gray-500 text-white">Gray</option>
-                        </Select>
-
-                        <!-- Quantity Selection -->
-                        <div class="flex px-4">
-                            <h3 class="font-semibold mb-3">Quantity</h3>
-                            <div class="flex items-center space-x-4">
-                                <button
-                                    class="w-10 h-10 rounded-full border hover:bg-slate-50 focus:ring-2 focus:ring-slate-700 focus:ring-offset-2">-</button>
-                                <span class="text-lg font-medium">1</span>
-                                <button
-                                    class="w-10 h-10 rounded-full border hover:bg-slate-50 focus:ring-2 focus:ring-slate-700 focus:ring-offset-2">+</button>
+                        <!-- Quantité -->
+                        <div class="flex items-center gap-4">
+                            <label id="quantity-label" class="sr-only">Quantité</label>
+                            <div class="flex items-center border rounded-lg" role="spinbutton"
+                                aria-labelledby="quantity-label">
+                                <button id="decrease"
+                                    class="px-4 py-2 border-r hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                                    aria-label="Diminuer la quantité">
+                                    <span class="sr-only">Diminuer</span>
+                                    -
+                                </button>
+                                <span id="quantity" class="w-12 text-center text-xl" aria-live="polite">1</span>
+                                <button id="increase"
+                                    class="px-4 py-2 border-l hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                                    aria-label="Augmenter la quantité">
+                                    <span class="sr-only">Augmenter</span>
+                                    +
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <!-- Add To Cart BTN -->
-                    <div class="flex gap-4">
-                        <button
-                            class="flex-1 bg-slate-700 text-white py-3 rounded-lg hover:bg-slate-800 focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 transition-colors">
-                            Add to Cart
-                        </button>
-                        <button
-                            class="w-12 h-12 border rounded-lg flex items-center justify-center hover:bg-slate-50 focus:ring-2 focus:ring-slate-700 focus:ring-offset-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                            </svg>
-                        </button>
-                    </div>
 
-                    <!-- Description du Produit -->
-                    <div class="border-t pt-8">
-                        <h3 class="font-semibold mb-4">Product Description</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Stay cozy and stylish with our Cat&Dog Hoodie. Made from premium cotton blend material, this
-                            comfortable hoodie features a unique design perfect for pet lovers. The ribbed cuffs and hem
-                            ensure a perfect fit, while the kangaroo pocket keeps your hands warm.
+                    <!-- Description du produit -->
+                    <div class="space-y-4">
+                        <h2 class="text-xl font-bold">Description</h2>
+                        <p class="text-gray-600">
+                            Ce hoodie confortable et stylé présente un design unique combinant chats et chiens.
+                            Fabriqué en coton doux de haute qualité, il est parfait pour toutes les saisons.
                         </p>
-                        <ul class="mt-4 space-y-2 text-gray-600">
-                            <li>• 80% Cotton, 20% Polyester</li>
-                            <li>• Machine washable</li>
-                            <li>• Unisex design</li>
-                            <li>• Available in multiple sizes</li>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>100% coton premium</li>
+                            <li>Lavable en machine</li>
+                            <li>Design exclusif</li>
+                            <li>Poches kangourou</li>
+                            <li>Capuche doublée</li>
                         </ul>
                     </div>
 
-                    <!-- Shipping & Return Policy -->
-                    <div class="border-t pt-8">
-                        <h3 class="font-semibold mb-4">Shipping & Returns</h3>
-                        <div class="space-y-4 text-gray-600">
-                            <div class="flex items-start gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
+                    <!-- Actions -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button
+                            class="add-to-cart-btn bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 flex-1"
+                            aria-label="Ajouter au panier">
+                            Ajouter au panier
+                        </button>
+                        <button
+                            class="wishlist-btn bg-gray-100 text-gray-800 px-8 py-3 rounded-lg hover:bg-gray-200 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                            aria-label="Ajouter à la liste de souhaits">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                            Favoris
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section produits similaires -->
+        <section class="py-20" aria-labelledby="similar-products-title">
+            <h2 id="similar-products-title" class="font-bold text-4xl mb-12 text-center">Produits Similaires</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12">
+                <!-- Carte produit similaire -->
+                <article class="group">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="/assets/images/about-img33.png"
+                            class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                            alt="Hoodie similar style" loading="lazy" width="300" height="300">
+                        <div class="absolute top-2 right-2">
+                            <button
+                                class="p-2 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                                aria-label="Ajouter aux favoris">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                                 </svg>
-                                <p>Free shipping on orders over $50</p>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M16 15v-1a4 4 0 00-4-4H8m0 0l3 3m-3-3l3-3m9 14V5a2 2 0 00-2-2H6a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z" />
-                                </svg>
-                                <p>30-day return policy</p>
-                            </div>
+                            </button>
                         </div>
                     </div>
-
-                </div>
+                    <div class="mt-4 text-center">
+                        <h3 class="text-xl font-bold">Hoodie Classic</h3>
+                        <div class="flex justify-center space-x-2 mt-2">
+                            <div class="text-yellow-400" aria-label="4 étoiles sur 5">★★★★☆</div>
+                            <span class="text-gray-500">(4.0)</span>
+                        </div>
+                        <p class="mt-2 text-green-600 font-bold">45.00 $</p>
+                    </div>
+                </article>
+                <!-- Répéter pour d'autres produits similaires -->
             </div>
         </section>
-
-        <!-- Produit Simulaires -->
-        <section class="flex-row justify-center text-center">
-            <h1 class="font-bold text-6xl mt-20">Simulare Product</h1>
-            <div class="grid grid-cols-3 gap-4">
-                <div class="rounded-full">
-                    <img src="/assets/images/about-img33.png" alt="" class="">
-                    <h2>Produit 1</h2>
-                </div>
-                <div>
-                    <img src="/assets/images/about3.png" alt="">
-                    <h2>Produit 2</h2>
-                </div>
-                <div>
-                    <img src="/assets/images/about2.jpg" alt="">
-                    <h2>Produit 3</h2>
-                </div>
-                <div>
-                    <img src="/assets/images/about5.png" alt="">
-                    <h2>Produit 4</h2>
-                </div>
-                <div>
-                    <img src="/assets/images/about7.png" alt="">
-                    <h2>Produit 5</h2>
-                </div>
-                <div>
-                    <img src="/assets/images/about4.webp" alt="">
-                    <h2>Produit 6</h2>
-                </div>
-            </div>
-            
-        </section>
-
     </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-[#1D242D] text-white font-poppins w-full h-60">
+        <form class="px-24 py-8  grid grid-cols-5 gap-6 ">
+            <div>
+                <img src="/assets/icon/logo_white.png" class="w-full h-20">
+                <p class="mt-4 text-xs text-[#D7D7D7]">Offers modern, affordable clothing for Men ,Women and Kids,
+                    perfect for everyday wear.</p>
+            </div>
+            <div>
+                <h2 class="text-l">Shop</h2>
+                <p class="mt-4 text-xs text-[#D7D7D7]">
+                    All products <br>
+                    Men <br>
+                    Women
+                </p>
+            </div>
+            <div>
+                <h2 class="text-l">Company</h2>
+                <p class="mt-4 text-xs text-[#D7D7D7]">
+                    About us <br>
+                    Contact <br>
+                    Affiliates <br>
+                </p>
+            </div>
+            <div>
+                <h2 class="text-l">Support</h2>
+                <p class="mt-4 text-xs text-[#D7D7D7]">
+                    FAQs <br>
+                    Cookie Policy <br>
+                    Terms of Use
+                </p>
+            </div>
+            <div>
+                <h2 class="text-l">Payment</h2>
+                <div class="flex w-20 mt-2">
+                    <img src="/assets/icon/mastercard.png" alt="mastercard">
+                    <img src="/assets/icon/paypal.png" alt="paypal">
+                    <img src="/assets/icon/visa-logo.png" alt="visa-logo">
+                </div>
+            </div>
+        </form>
+        <div class="border border-[#D7D7D7] border-x-0 border-t-0 mb-4 w-[80%] ml-32"></div>
+        <p class="font-poppins flex justify-center text-xs text-[#D7D7D7]">
+            stylefox Copyright ©2024. All right reserved
+        </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/Detailles.js"></script>
 </body>
 
 </html>
