@@ -2,7 +2,6 @@
 <html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,43 +16,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
-    <!-- Styles personnalisés -->
-    <style>
-        /* Styles pour le skeleton loading */
-        .skeleton {
-            animation: skeleton-loading 1s linear infinite alternate;
-        }
-
-        @keyframes skeleton-loading {
-            0% {
-                background-color: #e5e7eb;
-            }
-
-            100% {
-                background-color: #f3f4f6;
-            }
-        }
-
-        /* Styles pour les transitions */
-        .fade-enter {
-            opacity: 0;
-        }
-
-        .fade-enter-active {
-            opacity: 1;
-            transition: opacity 300ms ease-in;
-        }
-
-        .fade-exit {
-            opacity: 1;
-        }
-
-        .fade-exit-active {
-            opacity: 0;
-            transition: opacity 300ms ease-out;
-        }
-    </style>
 </head>
 
 <body class="bg-gray-100 font-poppins">
@@ -95,7 +57,7 @@
                 </button>
 
                 <!-- Menu principal -->
-                <ul id="nav-menu" class="sm:flex items-center gap-6 md:gap-8 hidden sm:block" role="menubar">
+                <ul id="nav-menu" class="sm:flex items-center gap-6 md:gap-8 hidden" role="menubar">
                     <li role="none"><a href="/index.html"
                             class="nav-link hover:text-slate-600 transition-colors duration-300"
                             role="menuitem">Home</a></li>
@@ -131,8 +93,26 @@
 
             <!-- Menu mobile -->
             <div id="mobile-menu"
-                class="fixed inset-0 bg-white transform transition-transform duration-300 ease-in-out translate-x-full sm:hidden"
+                class="fixed inset-0 bg-white transform transition-transform duration-300 ease-in-out -translate-x-full sm:hidden"
                 role="dialog" aria-modal="true" aria-label="Menu mobile">
+                <!-- Icônes utilisateur et panier -->
+                <li class="flex items-center gap-4 md:gap-6 ml-8" role="none">
+                    <button
+                        class="relative group hover:scale-110 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                        aria-label="Panier d'achat">
+                        <img class="w-6 h-6" src="/assets/icon/cart.svg" alt="" aria-hidden="true">
+                        <span
+                            class="absolute -top-2 -right-2 bg-slate-700 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center"
+                            aria-label="Nombre d'articles dans le panier">
+                            0
+                        </span>
+                    </button>
+                    <button
+                        class="hover:scale-110 transition-transform duration-300 focus:outline-none focus:ring-2 focus:ring-slate-500"
+                        aria-label="Compte utilisateur">
+                        <img class="w-6 h-6" src="/assets/icon/user.svg" alt="" aria-hidden="true">
+                    </button>
+                </li>
                 <div class="p-4">
                     <button aria-label="Fermer le menu"
                         class="absolute top-4 right-4 p-2 focus:outline-none focus:ring-2 focus:ring-slate-500">
@@ -308,11 +288,9 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                             </svg>
-                            Favoris
                         </button>
                     </div>
                 </div>
-            </div>
         </section>
 
         <!-- Section produits similaires -->
@@ -370,17 +348,17 @@
             <div>
                 <h2 class="text-l">Company</h2>
                 <p class="mt-4 text-xs text-[#D7D7D7]">
-                    About us <br>
-                    Contact <br>
-                    Affiliates <br>
+                    <a href="About.html">About us</a><br>
+                    <a href="">Contact</a><br>
+                    <a href="">Affiliates</a>
                 </p>
             </div>
             <div>
                 <h2 class="text-l">Support</h2>
                 <p class="mt-4 text-xs text-[#D7D7D7]">
-                    FAQs <br>
-                    Cookie Policy <br>
-                    Terms of Use
+                    <a href="About.html#faq">FAQs</a><br>
+                    <a href="">Cookie Policy</a><br>
+                    <a href="">Terms of Use</a>
                 </p>
             </div>
             <div>
@@ -399,7 +377,16 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/js/Detailles.js"></script>
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            const isExpanded = hamburgerBtn.getAttribute('aria-expanded') === 'true';
+            hamburgerBtn.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle(isExpanded ? 'translate-x-full' : '-translate-x-full');
+        });
+    </script>
 </body>
 
 </html>
