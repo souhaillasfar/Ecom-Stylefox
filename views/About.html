@@ -6,7 +6,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./../css/output.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -71,35 +72,38 @@
                
             </div>
             <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">
-                <i class="fa-solid fa-medal text-[30px]" id="medal"></i>
+                <i class=" text-[30px]" id="medal"></i>
+                <!-- <i class="fa-solid fa-medal text-[30px]" id="medal"></i> -->
                 <p class="py-3" id="superio"></p>
                 <p id="Material">
                 </p>
             </div>
             <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">
-                <i class="fa-solid fa-users text-[30px]" id="user"></i>
+                <i class=" text-[30px]" id="user"></i>
+                <!-- <i class="fa-solid fa-users text-[30px]" id="user"></i> -->
                 <p class="py-3" id="detail"></p>
                 <p id="an"></p>
                     
               
             </div>
         </div>
-        <div class="md:flex md:mt-[6rem] hidden md:" id="icons">
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">
-                <i class="fa-solid fa-truck text-[30px]" id="truck"></i>
+        <div class="md:flex md:mt-[6rem]  md:hidden" id="icons">
+            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white" id="test1">
+                <i class=" text-[30px]" id="truck"></i>
+                <!-- <i class="fa-solid fa-truck text-[30px]" id="truck"></i> -->
                 <p class="py-3" id="flex"> </p>
                 <p  id="provide">
                    
                 </p>
             </div>
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">
+            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white" id="test">
                 <i class="fa-solid fa-headset  text-[30px]" id="head"></i>
                 <p class="py-3" id="live"></p>
                 <p  id="instant">
                     
                 </p>
             </div>
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">
+            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white" id="test">
                 <i class="fa-brands fa-square-instagram text-[30px]" id="squar"></i>
                 <p class="py-3" id="social"></p>
                 <p id="enable">
@@ -108,30 +112,49 @@
             </div>
         </div>
         <button class=" mt-10 ml-[11rem] text-white bg-[#5984bb] px-[20px] py-[10px] font-bold rounded-xl md:ml-[36rem] md:mt-[4rem] hover:bg-[#ad4007]"  id="showMore">Show More</button>
+        <button class=" mt-10 ml-[11rem] text-white bg-[#5984bb] px-[20px] py-[10px] font-bold rounded-xl md:ml-[36rem] md:mt-[4rem] hover:bg-[#ad4007] hidden md:hidden"  id="showLess">Show Less</button>
+
     </section>
 
     <section class="mt-10">
         <h3 class="text-[20px] text-center md:text-[3rem]" id="">FAQ</h3>
         <div class="bg-[#d9d9d948] mt-9 md:pl-12 shadow-xl">
             <div class="pt-6  ml-4 ">
-                <p class="font-bold text-[16px] md:text-[23px]">What are the delivery times?</p>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden">Delivery times vary depending on your location and option chosen, but
+                <div class=" text " >
+                    <p class="font-bold text-[16px] md:text-[23px] contenu">What are the delivery times?</p>
+        
+               
+                  
+                    <img src="/assets/images/flech-d.png" alt="" class="flesh" >
+                  
+                </div>
+                <p class="text-[12px] md:text-[16px] md:pt-3 hidden flesh-Text contenu">Delivery times vary depending on your location and option chosen, but
                     generally you will receive your
                     order within 3-5 business days</p>
             </div>
             <div class="pt-6 ml-4">
-                <p class="font-bold text-[16px] md:text-[23px]">What payment methods do you accept?</p>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden">We accept payment by credit card, PayPal, and other secure payment methods available at checkout.
+                <div class="text">
+                    <p class="font-bold text-[16px] md:text-[23px]">What payment methods do you accept?</p>
+                    <img src="/assets/images/flech-d.png" alt="" class="flesh" >
+                </div>
+                <p class="text-[12px] md:text-[16px] md:pt-3 hidden contenu">We accept payment by credit card, PayPal, and other secure payment methods available at checkout.
                     </p>
             </div>
             <div class="pt-6  ml-4">
-                <p class="font-bold text-[16px] md:text-[23px]">How can I return an item?</p>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden">If you are not satisfied with your purchase, you may return an item within 30 days of receipt, provided it is in its original condition.
+                <div class="text">
+                    
+                    <p class="font-bold text-[16px] md:text-[23px]">How can I return an item?</p>
+                    <img src="/assets/images/flech-d.png" alt=""  class="flesh" >
+                </div>
+                <p class="text-[12px] md:text-[16px] md:pt-3 hidden contenu">If you are not satisfied with your purchase, you may return an item within 30 days of receipt, provided it is in its original condition.
                    </p>
             </div>
             <div class="py-6   ml-4">
+                 <div class="text">
                 <p class="font-bold text-[16px] md:text-[23px]"> Are the items available in stock?</p>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden">We regularly update item availability information on our site. If a product is out of stock, you can sign up to be notified when it is back in stock</p>
+                <img src="/assets/images/flech-d.png" alt=""  class="flesh" >
+               </div>
+                <p class="text-[12px] md:text-[16px] md:pt-3 hidden contenu">We regularly update item availability information on our site. If a product is out of stock, you can sign up to be notified when it is back in stock</p>
             </div>
 
     </section>

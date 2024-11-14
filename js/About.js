@@ -1,40 +1,37 @@
 let showMore = document.getElementById("showMore");
 let icons = document.getElementById("icons");
 let mysection=document.getElementById('mysection');
+let test =document.getElementById('test1');
+let showLess = document.getElementById("showLess");
 
-showMore.addEventListener('click',function(e){
 
-    e.preventDefault();
-    showMore
-    let file=document.createElement('span');
-     file.innerHTML=`
-      <div class=" md:flex md:mt-[5rem] ">
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] border borde-black py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white ">
-                <i class=" text-[30px] " id="solid"></i>
-                <p class="py-3" id="rendy"></p>
-                <p class="" id="select"></p>
-                   
-               
-            </div>
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">
-                <i class="fa-solid fa-medal text-[30px]" id="medal"></i>
-                <p class="py-3" id="superio"></p>
-                <p id="Material">
-                </p>
-            </div>
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">
-                <i class="fa-solid fa-users text-[30px]" id="user"></i>
-                <p class="py-3" id="detail"></p>
-                <p id="an"></p>
-                    
-              
-            </div>
-            
-     `;
-     mysection.appendChild(file);
+
+
+
+showMore.addEventListener('click',function(){
+   icons.classList.remove('hidden')
+    icons.classList.remove('md:hidden')
+    showLess.classList.remove('hidden')
+    showLess.classList.remove('md:hidden')
+    showMore.classList.add('hidden')
+    showMore.classList.add('hidden')
+     
 
 })
 
+showLess.addEventListener('click',function(){
+
+
+    icons.classList.add('hidden')
+    icons.classList.add('md:hidden')
+    showMore.classList.remove('hidden')
+    showMore.classList.remove('md:hidden')
+    showLess.classList.add('hidden')
+    showLess.classList.add('md:hidden')
+
+})
+
+/////
 
 let carousel=document.getElementById("carousel")
 carousel.addEventListener("wheel",(evt)=>{
@@ -80,37 +77,37 @@ fetch('../data/data.json')
 
 
         if(item.id==1){
-            solid.innerHTML=`${item.icons}`;
+            solid.innerHTML=`${item.icons.url}`;
             rendy.innerHTML=`${item.titre}`;
             select.innerHTML=`${item.short_description}`
 
         }
         else if(item.id==2){
-            medal.innerHTML=`${item.icons}`;
+            medal.innerHTML=`${item.icons.url}`;
             superio.innerHTML=`${item.titre}`;
             Material.innerHTML=`${item.short_description}`
 
         }
         else if(item.id==3){
-            user.innerHTML=`${item.icons}`;
+            user.innerHTML=`${item.icons.url}`;
             detail.innerHTML=`${item.titre}`;
             an.innerHTML=`${item.short_description}`
 
         }
         else if(item.id==4){
-            truck.innerHTML=`${item.icons}`;
+            truck.innerHTML=`${item.icons.url}`;
             flex.innerHTML=`${item.titre}`;
             provide.innerHTML=`${item.short_description}`
 
         }
         else if(item.id==5){
-            head.innerHTML=`${item.icons}`;
+            head.innerHTML=`${item.icons.url}`;
             live.innerHTML=`${item.titre}`;
             instant.innerHTML=`${item.short_description}`
 
         }
         else if(item.id==6){
-            squar.innerHTML=`${item.icons}`;
+            squar.innerHTML=`${item.icons.url}`;
             social.innerHTML=`${item.titre}`;
             enable.innerHTML=`${item.short_description}`
 
@@ -124,5 +121,26 @@ fetch('../data/data.json')
 
 
 })
+
+let flesh = document.querySelectorAll('.flesh')
+let contenu = document.querySelectorAll('.contenu')
+
+
+// flesh.forEach(flesh => {
+//     flesh.addEventListener('click' , () => {
+//     contenu.classList.remove('hidden')
+//     })
+// })
+
+flesh.forEach((fleshItem, index) => {
+    fleshItem.addEventListener('click', () => {
+        if (contenu[0]) {
+            contenu[0].classList.remove('hidden');
+        }
+    });
+});
+
+
+
 
 
