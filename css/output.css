@@ -679,24 +679,16 @@ video {
   width: 12rem;
 }
 
-.w-\[40px\]{
-  width: 40px;
-}
-
 .w-\[80\%\]{
   width: 80%;
 }
 
-.w-full{
-  width: 100%;
-}
-
-.w-\[px\]{
-  width: px;
-}
-
 .w-\[80px\]{
   width: 80px;
+}
+
+.w-full{
+  width: 100%;
 }
 
 .max-w-sm{
@@ -1006,10 +998,6 @@ video {
 }
 
 @media (min-width: 0px){
-  .sm\:flex{
-    display: flex;
-  }
-
   .sm\:grid{
     display: grid;
   }

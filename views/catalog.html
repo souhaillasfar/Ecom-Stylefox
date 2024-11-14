@@ -45,33 +45,33 @@
 
     <section class="font-poppins mt-6 md:flex lg:flex gap-32 pb-3 sm:grid sm:justify-center">
         <form class="lg:block md:block w-full sm:w-full md:w-1/3 lg:w-1/4 h-full pl-8 ml-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <div class="sm:flex  sm:justify-center ">
-                <h3 class="text-black mt-2 font-bold ">Categories <i class=" ml-8 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
-                <ul class="sm:hidden ">
-                    <li class="mt-2 ">Women <i class=" ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></li>
-                    <ul class="ml-4 ">
-                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">Dresses</li>
-                        <li class="bg-slate-100 hover:bg-slate-600  w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">Tops</li>
-                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">Skirts</li>
+            <div class=" sm:flex-col  sm:justify-center j ">
+                <h3 id="btn"  class="text-black mt-2 font-bold ">Categories <i class=" ml-8 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
+                <div id="list" style="display: none;">
+                    <h3 class="mt-2 ">Women <i class=" ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
+                    <ul id="wlist" class="ml-4 " style="display: none;">
+                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox" onclick="filtrepar(this)">Dresses</li>
+                        <li class="bg-slate-100 hover:bg-slate-600  w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox" onclick="filtrepar(this)">Tops</li>
+                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox" onclick="filtrepar(this)">Skirts</li>
                     </ul>
-                    <li class="mt-2 ">Men <i class="ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></li>
+                    <h3 class="mt-2 ">Men <i class="ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
                     <ul class="ml-4">
-                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">T-shirts</li>
-                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">Jackets</li>
-                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">Jeans</li>
-                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">Hoodies</li>
+                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox" onclick="filtrepar(this)">T-shirts</li>
+                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox" onclick="filtrepar(this)">Jackets</li>
+                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox" onclick="filtrepar(this)">Jeans</li>
+                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox"onclick="filtrepar(this)">Hoodies</li>
                     </ul>
-                    <li class="mt-2  ">Kids <i class="ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></li>
+                    <h3 class="mt-2  ">Kids <i class="ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
                     <ul class="ml-4">
-                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input class="" type="checkbox">T-shirts</li>
-                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">Shorts</li>
-                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">Sweaters</li>
+                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input class="" type="checkbox" onclick="filtrepar(this)">T-shirts</li>
+                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox" onclick="filtrepar(this)">Shorts</li>
+                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox"onclick="filtrepar(this)">Sweaters</li>
                     </ul>
-                </ul>
-            </div>
+                </div>
+            
         
-            <div class="sm:hidden">
-                <h3 class="mt-2">Size <i class=" ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
+            <div class="">
+                <h3 class="mt-2" >Size <i class=" ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
                 <ul class="ml-4">
                     <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">S</li>
                     <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">M</li>
@@ -80,20 +80,16 @@
                 </ul>
             </div>
         
-            <div class="sm:hidden">
-                <h3 class="mt-2  ">Price <i class="ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
-                <ul class="ml-4">
-                    <li class="bg-slate-200 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">Low Price</li>
-                    <li class="mb-2 bg-slate-200 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">High Price</li>
-                </ul>
-            </div>
+            
+          </div>
+        </div>
         </form>
-        <form class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:w-full md:w-[100%] lg:w-[80%] sm:justify-center gap-11 gap-y-4">
-        <div class="sm:w-[100%] lg:w-[80%] md:w-[80%] bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <form id="produit_container" class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:w-full md:w-[100%] lg:w-[80%] sm:justify-center gap-11 gap-y-4">
+        <!-- <div class="sm:w-[100%] lg:w-[80%] md:w-[80%] bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img src="/assets/images/Jeans de printemps.png" alt="Image produit" class="image">
-            <div class="flex gap-12 p-2 ">
+            <div class="image flex gap-12 p-2 ">
                 <div class="">
-                <h2 class="font-poppins">Title</h2>
+                <h2 class="title font-poppins">Title</h2>
                 <p class="text-gray-500 mt-10">Colors : <span>3</span></p>
                 </div>
                  <span class="font-bold mt-6">$25.99</span>
@@ -148,7 +144,7 @@
                     </div>
                      <span class="font-bold mt-6 ">$25.99</span>
                 </div>
-            </div>
+            </div> -->
             
         </form>
     </section>
@@ -242,6 +238,6 @@
         </p>
       </footer>
       
-
+<script src="/js/catalog.js"></script>
 </body>
 </html>
