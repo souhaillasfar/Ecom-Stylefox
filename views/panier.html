@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panier</title>
     <link rel="stylesheet" href="../css/output.css">
+    <!-- Add these script tags -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body>
   <div id="shopping" class="fixed inset-0 z-50 overflow-hidden">
@@ -43,11 +46,11 @@
               <!-- Buttons -->
               <div class="border-t border-red-200 px-4 py-6 sm:px-6 bg-black">
                 <div class="flex gap-2">
-                  <button class="w-full bg-black border border-gray-300 rounded-lg text-white px-6 py-1 text-base font-medium hover:bg-gray-900">
-                    Devis
+                  <button id="devisButton" class="w-full bg-black border border-gray-300 rounded-lg text-white px-6 py-1 text-base font-medium hover:bg-gray-900">
+                        Devis
                   </button>
                   <button class="w-full bg-white text-black border-gray-300 rounded-lg px-6 text-base font-medium hover:bg-gray-50">
-                    Confirm
+                        Confirm
                   </button>
                 </div>
               </div>
@@ -56,17 +59,9 @@
         </div>
       </div>
     </div>
-  </div>
-  <script src="../js/shop.js"></script>
+  </div> 
+  <script src="../js/devis.js"></script>
+  <script src="../js/panier.js"></script>
+  <script src="../assets/icon/logo.png"></script>
 </body>
 </html>
-
-
-<!-- <button onclick="addToCart({
-    name: 'Product Name',
-    price: 99.99,
-    image: '../path/to/image.jpg',
-    size: 'L'  // optional
-})" class="bg-black text-white px-4 py-2 rounded-lg">
-    Add to Cart
-</button> -->
