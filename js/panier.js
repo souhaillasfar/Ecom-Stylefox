@@ -1,13 +1,10 @@
-// Get DOM elements
 const closeShopping = document.querySelector('#closeShopping');
 const shopping = document.querySelector('#shopping');
 const cartItems = document.querySelector('#cartItems');
 const subtotalAmount = document.querySelector('#subtotalAmount');
 
-// Initialize cart array from localStorage or empty array if none exists
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Function to update cart display
 function updateCartDisplay() {
     if (cart.length === 0) {
         cartItems.innerHTML = `
@@ -47,7 +44,7 @@ function updateCartDisplay() {
     subtotalAmount.textContent = `$${total.toFixed(2)}`;
 }
 
-// Function to add item to cart
+// to add items to cart
 function addToCart(item) {
     const existingItemIndex = cart.findIndex(i => i.name === item.name && i.size === item.size);
     
@@ -64,14 +61,14 @@ function addToCart(item) {
     updateCartDisplay();
 }
 
-// Function to increase quantity
+// to add quantity
 function increaseQuantity(index) {
     cart[index].quantity++;
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartDisplay();
 }
 
-// Function to decrease quantity
+// to decrease quantity
 function decreaseQuantity(index) {
     if (cart[index].quantity > 1) {
         cart[index].quantity--;
@@ -80,14 +77,14 @@ function decreaseQuantity(index) {
     updateCartDisplay();
 }
 
-// Function to remove item
+// to remove an item
 function removeItem(index) {
     cart.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartDisplay();
 }
 
-// Close shopping cart (you can implement this later)
+// closing the shopping cart 
 closeShopping.addEventListener('click', () => {
     shopping.classList.add('hidden');
 });
@@ -95,8 +92,11 @@ closeShopping.addEventListener('click', () => {
 // Initial cart render
 updateCartDisplay();
 
-// Make functions available globally
 window.addToCart = addToCart;
 window.increaseQuantity = increaseQuantity;
 window.decreaseQuantity = decreaseQuantity;
 window.removeItem = removeItem;
+
+document.getElementById('devisButton').addEventListener('click', () => {
+    generateInvoice(cart);
+});
