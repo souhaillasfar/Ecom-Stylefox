@@ -16,8 +16,9 @@ function get_product() {
 
   fetch("https://ahmedbenkrarayc.github.io/ecommercedata/products.json").then((replay) => { return replay.json() }).then((product) => {
     if (id === product.id) {
-      const product_images = Document.getElementById('product_images');
+      const product_images = document.getElementById('product_images');
       const info = document.getElementById('info');
+      const option = document.getElementById('option');
 
       // l'image pricipale
       const main_image = document.createElement('div');
@@ -62,24 +63,41 @@ function get_product() {
                       `;
       prix.appendChild(info);
       // option de selection
-      const option = document.getElementById('option');
+      const size = document.createElement('div');
+      size.innerHTML = `
+                      <div class="w-full md:w-1/3">
+                          <label for="size" class="block text-sm font-medium text-gray-700">Size</label>
+                          <select id="size" class="mt-2 block w-full bg-white border border-gray-300 rounded-md shadow-sm" onchange="${updatePrice()}">
+                              <option value="">Choisir la taille</option>
+                              <option value="XS">${product.variant[size]}</option>
+                              <option value="S">S</option>
+                              <option value="M">M</option>
+                              <option value="L">L</option>
+                              <option value="XL">XL</option>
+                              <option value="XXL">XXL</option>
+                          </select>
+                      </div>
+                    `;
+
 
     }
   });
 }
 
-// Fonctions pour la gestion des quantités
-function decreaseQuantity() {
-  const quantityInput = document.getElementById('quantity');
-  const currentValue = parseInt(quantityInput.value);
-  if (currentValue > 1) {
-    quantityInput.value = currentValue - 1;
-  }
-}
 
-function increaseQuantity() {
+function gestion_quantity(sing){
   const quantityInput = document.getElementById('quantity');
-  quantityInput.value = parseInt(quantityInput.value) + 1;
+
+  switch(sing){
+    case '-':
+      if(parseInt(quantityInput.value) > 1){
+        quantityInput.value = parseInt(quantityInput.value) - 1;
+      }
+      break;
+    case '+':
+      quantityInput.value = parseInt(quantityInput.value) + 1;
+      break;
+  }
 }
 
 // Image gallery management
