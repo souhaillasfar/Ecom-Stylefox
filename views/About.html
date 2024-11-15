@@ -17,83 +17,39 @@
 </head>
 
 <body>
+    
+    <header>
+    <div class="bg-primary py-3">
+        <p class="text-white text-center text-xs">Sign up and <span class="font-semibold">GET 20% FOR</span> your first order.  <a href="#" class="font-semibold">Sign up now</a></p>
+    </div>
+    <nav class="flex items-center justify-between sm:px-[5%] lg:px-[8%] py-2 navshdaow">
+        <img class="w-[80px]" src="./../assets/icon/logo.png" alt="logo">
 
-    <header class="relative">
-        <!-- Bannière promotionnelle -->
-        <div class="bg-slate-500 py-3 hidden sm:block" role="alert" aria-live="polite">
-            <div class="flex items-center justify-center gap-2 text-white">
-                <p class="text-sm">Sign up and <span class="font-semibold">GET 20% OFF</span> your first order.
-                    <a href="#"
-                        class="text-sm font-semibold hover:text-slate-200 transition-colors duration-300 underline underline-offset-2">Sign
-                        up now</a>
-                </p>
-            </div>
-        </div>
-
-        <!-- Navigation principale -->
-        <nav class="flex items-center justify-between px-4 md:px-20 py-4 bg-white shadow-sm sticky top-0 z-50">
-            <a href="/" class="block hover:opacity-90 transition-opacity duration-300">
-                <img class="w-[100px] h-auto" src="/assets/icon/logo_black.png" alt="StyleFox Logo" width="100"
-                    height="40">
-            </a>
-
-            <!-- Menu et boutons d'action -->
-            <div class="flex items-center gap-6">
-                <button id="hamburger-btn" class="sm:hidden flex items-center text-gray-600 hover:text-gray-800">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-
-                <!-- Navigation desktop -->
-                <ul class="sm:flex items-center gap-6 md:gap-8 hidden">
-                    <li><a href="/index.html" class="hover:text-slate-600 transition-colors duration-300">Home</a></li>
-                    <li><a href="catalog.html" class="hover:text-slate-600 transition-colors duration-300">Catalog</a>
-                    </li>
-                    <li><a href="About.html" class="hover:text-slate-600 transition-colors duration-300">About</a></li>
-                    <li><a href="#" class="hover:text-slate-600 transition-colors duration-300">Contact</a></li>
-
-                    <!-- Icônes utilisateur -->
-                    <li class="flex items-center gap-4 md:gap-6 ml-8">
-                        <button class="relative group hover:scale-110 transition-transform duration-300">
-                            <img class="w-6 h-6" src="/assets/icon/cart.svg" alt="Panier">
-                            <span
-                                class="absolute -top-2 -right-2 bg-slate-700 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
-                        </button>
-                        <button class="hover:scale-110 transition-transform duration-300">
-                            <img class="w-6 h-6" src="/assets/icon/user.svg" alt="Compte">
-                        </button>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Menu mobile -->
-            <div id="mobile-menu"
-                class="fixed inset-0 bg-white transform translate-x-full transition-transform duration-300 ease-in-out sm:hidden z-50">
-                <div class="p-4">
-                    <button id="close-menu" class="absolute top-4 right-4 p-2">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    <ul class="space-y-4 mt-8">
-                        <li><a href="/index.html"
-                                class="block py-2 hover:bg-gray-100 transition-colors duration-300">Home</a></li>
-                        <li><a href="catalog.html"
-                                class="block py-2 hover:bg-gray-100 transition-colors duration-300">Catalog</a></li>
-                        <li><a href="About.html"
-                                class="block py-2 hover:bg-gray-100 transition-colors duration-300">About</a></li>
-                        <li><a href="#" class="block py-2 hover:bg-gray-100 transition-colors duration-300">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-
+        <ul class="flex items-center text-sm sm:gap-2 md:gap-4">
+            <li>
+                <a class="sm:hidden md:block" href="#">Home</a>
+            </li>
+            <li>
+                <a class="sm:hidden md:block" href="#">Catalog</a>
+            </li>
+            <li>
+                <a class="sm:hidden md:block" href="#">About</a>
+            </li>
+            <li>
+                <a class="sm:hidden md:block" href="#">Contact</a>
+            </li>
+            <li class="ml-8">
+                <img class="size-5" src="./../assets/icon/cart.svg" alt="cart icon">
+            </li>
+            <li>
+                <a href="#" class="sm:hidden md:block"><img class="size-5" src="./../assets/icon/user.svg" alt="user icon"></a>
+            </li>
+            <li>
+                <a class="md:hidden" href="#"><img class="size-5" src="./../assets/icon/menu.svg" alt="user icon"></a>
+            </li>
+        </ul>
+    </nav>
+</header>
     <!-- ======== -->
     <section class="mt-[4rem]">
         <h1 class="text-gray-500 font-bold text-[20px] text-center md:text-[40px]">About Us</h1>
@@ -145,50 +101,49 @@
             </p>
         </div>
         <div class=" md:flex md:mt-[5rem] ">
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] border borde-black py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white ">
+            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] border borde-black py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-white ">
                
-                <p class="py-3 text-red" id="rendy"></p>
+                <p class="py-3 text-red font-bold" id="rendy"></p>
                 <p class="" id="select"></p>
                    
                
             </div>
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">  
-                <p class="py-3" id="superio"></p>
+            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-white">  
+                <p class="py-3 font-bold" id="superio"></p>
                 <p id="Material">
                 </p>
             </div>
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">
-                <i class=" text-[30px]" id="user"></i>
-                <p class="py-3" id="detail"></p>
+            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-white">
+             
+                <p class="py-3 font-bold" id="detail"></p>
                 <p id="an"></p>
                     
               
             </div>
         </div>
         <div class="md:flex md:mt-[6rem]  md:hidden" id="icons">
-            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white" id="test1">
-                <i class=" text-[30px]" id="truck"></i>
-                <p class="py-3" id="flex"> </p>
+            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-white" id="test1">
+                <p class="py-3 font-bold" id="flex"> </p>
                 <p  id="provide">
                    
                 </p>
             </div>
-            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white" id="test">
-                <p class="py-3" id="live"></p>
+            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-white" id="test">
+                <p class="py-3 font-bold" id="live"></p>
                 <p  id="instant">
                     
                 </p>
             </div>
-            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white" id="test">
+            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:bg-[#1b255a] hover:text-white dark:text-white" id="test">
 
-                <p class="py-3" id="social"></p>
+                <p class="py-3 font-bold" id="social"></p>
                 <p id="enable">
                     
                 </p>
             </div>
         </div>
-        <button class=" mt-10 ml-[11rem] text-white bg-[#5984bb] px-[20px] py-[10px] font-bold rounded-xl md:ml-[36rem] md:mt-[4rem] hover:bg-[#ad4007]"  id="showMore">Show More</button>
-        <button class=" mt-10 ml-[11rem] text-white bg-[#5984bb] px-[20px] py-[10px] font-bold rounded-xl md:ml-[36rem] md:mt-[4rem] hover:bg-[#ad4007] hidden md:hidden"  id="showLess">Show Less</button>
+        <button class=" mt-10 ml-[11rem] text-white bg-[#1b255a] px-[20px] py-[10px] font-bold rounded-xl md:ml-[36rem] md:mt-[4rem] hover:bg-[#1b405a]"  id="showMore">Show More</button>
+        <button class=" mt-10 ml-[11rem] text-white bg-[#1b255a] px-[20px] py-[10px] font-bold rounded-xl md:ml-[36rem] md:mt-[4rem] hover:bg-[#1b405a] hidden md:hidden"  id="showLess">Show Less</button>
 
     </section>
 
@@ -242,66 +197,43 @@
     </section>
 
 
-    <!-- Footer responsive -->
-    <footer class="bg-[#1D242D] text-white py-8 mt-[5rem]">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-8">
-                <!-- Logo et description -->
-                <div class="col-span-1 sm:col-span-2 md:col-span-1">
-                    <img src="/assets/icon/logo_white.png" alt="StyleFox Logo" class="w-32 h-auto mb-4">
-                    <p class="text-sm text-[#D7D7D7]">Offers modern, affordable clothing for Men, Women and Kids,
-                        perfect for everyday wear.</p>
-                </div>
-
-                <!-- Liens de navigation -->
+    <footer class="mt-[100px] bg-primary sm:px-[4rem] md:px-[4rem] lg:px-[5rem] pt-[3rem] pb-[1rem]">
+        <div class="md:flex md:gap-x-[80px] lg:gap-x-[100px] sm:w-fit mx-auto md:w-full">
+            <div class="md:w-[25%]">
+                <h1 class="text-white font-semibold text-xl">StyleFox</h1>
+                <p class="text-[#D7D7D7] mt-2 text-xs">Offers modern, affordable clothing for Men, Women, and Kids, perfect for everyday wear</p>
+            </div>
+            <div class="md:w-[75%] grid md:grid-cols-4 gap-y-6 sm:mt-6 md:mt-0">
                 <div>
-                    <h2 class="text-lg font-semibold mb-4">Shop</h2>
-                    <ul class="space-y-2 text-sm text-[#D7D7D7]">
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">All products</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Men</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Women</a></li>
-                    </ul>
+                    <h1 class="text-white font-medium text-base mb-3">Shop</h1>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">All products</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Men</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Women</a>
                 </div>
-
                 <div>
-                    <h2 class="text-lg font-semibold mb-4">Company</h2>
-                    <ul class="space-y-2 text-sm text-[#D7D7D7]">
-                        <li><a href="About.html" class="hover:text-white transition-colors duration-300">About us</a>
-                        </li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Affiliates</a></li>
-                    </ul>
+                    <h1 class="text-white font-medium text-base mb-3">Company</h1>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">About us</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Contact</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Affiliates</a>
                 </div>
-
                 <div>
-                    <h2 class="text-lg font-semibold mb-4">Support</h2>
-                    <ul class="space-y-2 text-sm text-[#D7D7D7]">
-                        <li><a href="About.html#faq" class="hover:text-white transition-colors duration-300">FAQs</a>
-                        </li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Cookie Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Terms of Use</a></li>
-                    </ul>
+                    <h1 class="text-white font-medium text-base mb-3">Support</h1>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">FAQs</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Cookie Policy</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Terms of Use</a>
                 </div>
-
-                <!-- Méthodes de paiement -->
-                <div class="col-span-1 sm:col-span-2 md:col-span-1">
-                    <h2 class="text-lg font-semibold mb-4">Payment Methods</h2>
-                    <div class="flex space-x-4">
-                        <img src="/assets/icon/mastercard.png" alt="Mastercard" class="h-8">
-                        <img src="/assets/icon/paypal.png" alt="PayPal" class="h-8">
-                        <img src="/assets/icon/visa-logo.png" alt="Visa" class="h-8">
+                <div>
+                    <h1 class="text-white font-medium text-base mb-2">Payment</h1>
+                    <div class="flex items-center gap-x-1">
+                        <img class="bg-cover h-fit" src="./../assets/icon/icmastercard.png" alt="mastercard icon">
+                        <img class="bg-cover h-fit" src="./../assets/icon/icvisa.png" alt="visa icon">
+                        <img class="bg-cover h-fit" src="./../assets/icon/icpaypal.png" alt="paypal icon">
                     </div>
                 </div>
             </div>
-
-            <!-- Séparateur -->
-            <div class="border-t border-[#D7D7D7] my-6"></div>
-
-            <!-- Copyright -->
-            <p class="text-center text-sm text-[#D7D7D7]">
-                stylefox Copyright ©2024. All right reserved
-            </p>
         </div>
+        <hr class="mt-10 mb-4">
+        <p class="text-center text-[#D7D7D7] text-xs">Copyright ©2024 stylefox. All right reserved</p>
     </footer>
 
     <script src="../js/global.js"></script>

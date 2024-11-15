@@ -186,7 +186,7 @@ fetch(window.products)
             element.innerHTML += `<i class="fa-solid fa-star text-yellow-400"></i>`
         }
 
-        for(let i=0; i< parseInt(gray); i++){
+        for(let i=0; i < parseInt(gray); i++){
             element.innerHTML += `<i class="fa-solid fa-star text-gray-400"></i>`
         }
 
