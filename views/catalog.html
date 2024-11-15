@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="">
+    <meta name="description" content="StyleFox is an online store offering modern and affordable clothing for men, women, and children. The site features a clear, responsive interface with product filters and a newsletter subscription option for discounts. It accepts multiple payment methods, including MasterCard, PayPal, and Visa.">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -48,11 +47,11 @@
             <div class=" sm:flex-col  sm:justify-center j ">
                 <h3 id="btn"  class="text-black mt-2 font-bold ">Categories <i class=" ml-8 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
                 <div id="list" style="display: none;">
-                    <h3 class="mt-2 ">Women <i class=" ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
-                    <ul id="wlist" class="ml-4 " style="display: none;">
-                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox" onclick="filtrepar(this)">Dresses</li>
-                        <li class="bg-slate-100 hover:bg-slate-600  w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox" onclick="filtrepar(this)">Tops</li>
-                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox" onclick="filtrepar(this)">Skirts</li>
+                    <!-- <h3 class="mt-2 ">Women <i class=" ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
+                    <ul id="wlist" class="ml-4 " >
+                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input class="selectID" type="checkbox" onclick="filtrepar(this)">Dresses</li>
+                        <li class="bg-slate-100 hover:bg-slate-600  w-40 border border-black border-x-0 border-t-0 pl-2"><input class="selectID" type="checkbox" onclick="filtrepar(this)">Tops</li>
+                        <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input  class="selectID" type="checkbox" onclick="filtrepar(this)">Skirts</li>
                     </ul>
                     <h3 class="mt-2 ">Men <i class="ml-4 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
                     <ul class="ml-4">
@@ -67,7 +66,7 @@
                         <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox" onclick="filtrepar(this)">Shorts</li>
                         <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox"onclick="filtrepar(this)">Sweaters</li>
                     </ul>
-                </div>
+                
             
         
             <div class="">
@@ -79,112 +78,25 @@
                     <li class="bg-slate-100 hover:bg-slate-600 w-40 border border-black border-x-0 border-t-0 pl-2"><input type="checkbox">XL</li>
                 </ul>
             </div>
+          </div> -->
         
             
           </div>
         </div>
         </form>
         <form id="produit_container" class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:w-full md:w-[100%] lg:w-[80%] sm:justify-center gap-11 gap-y-4">
-        <!-- <div class="sm:w-[100%] lg:w-[80%] md:w-[80%] bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <img src="/assets/images/Jeans de printemps.png" alt="Image produit" class="image">
-            <div class="image flex gap-12 p-2 ">
-                <div class="">
-                <h2 class="title font-poppins">Title</h2>
-                <p class="text-gray-500 mt-10">Colors : <span>3</span></p>
-                </div>
-                 <span class="font-bold mt-6">$25.99</span>
-            </div>
-        </div>
-        <div class="sm:w-[100%] lg:w-[80%] md:w-[80%] bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <img src="/assets/images/t-shirts_homme.png" alt="Image produit" class="image">
-            <div class="flex gap-12 p-2 ">
-                <div class="">
-                <h2 class="font-poppins">Title</h2>
-                <p class="text-gray-500 mt-10">Colors : <span>3</span></p>
-                </div>
-                 <span class="font-bold mt-6">$25.99</span>
-            </div>
-        </div>
-        <div class="sm:w-[100%] lg:w-[80%] md:w-[80%] bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <img src="/assets/images/t-shirts_homme.png" alt="Image produit" class="image">
-            <div class="flex gap-12 p-2 ">
-                <div class="">
-                <h2 class="font-poppins">Title</h2>
-                <p class="text-gray-500 mt-10">Colors : <span>3</span></p>
-                </div>
-                 <span class="font-bold mt-6">$25.99</span>
-            </div>
-        </div>
-        <div class="sm:w-[100%] lg:w-[80%] md:w-[80%] bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <img src="/assets/images/t-shirts_homme.png" alt="Image produit" class="image">
-            <div class="flex gap-12 p-2 ">
-                <div class="">
-                <h2 class="font-poppins">Title</h2>
-                <p class="text-gray-500 mt-10">Colors : <span>3</span></p>
-                </div>
-                 <span class="font-bold mt-6">$25.99</span>
-            </div>
-        </div>
-        <div class="sm:w-[100%] lg:w-[80%] md:w-[80%] bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <img src="/assets/images/Jeans de printemps.png" alt="Image produit" class="image">
-            <div class="flex gap-12 p-2 ">
-                <div class="">
-                <h2 class="font-poppins">Title</h2>
-                <p class="text-gray-500 mt-10">Colors : <span>3</span></p>
-                </div>
-                 <span class="font-bold mt-6">$25.99</span>
-            </div>
-        </div>
-             <div class="sm:w-[100%] lg:w-[80%] md:w-[80%] bg-gray-100 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                <img src="/assets/images/Jeans de printemps.png" alt="Image produit" class="image">
-                <div class="flex gap-12 p-2 ">
-                    <div class="">
-                    <h2 class="font-poppins">Title</h2>
-                    <p class="text-gray-500 mt-10">Colors : <span>3</span></p>
-                    </div>
-                     <span class="font-bold mt-6 ">$25.99</span>
-                </div>
-            </div> -->
-            
+        
         </form>
     </section>
 
 
+      <div id="produit_container"></div>
+
     <nav class="flex justify-center mt-6" aria-label="Page navigation example">
-        <ul class="flex items-center -space-x-px h-8 text-sm sm:text-xs">
-          <li>
-            <a href="#" class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-              <span class="sr-only">Previous</span>
-              <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-          </li>
-          <li>
-            <a href="#" aria-current="page" class="z-10 flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"">3</a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-          </li>
-          <li>
-            <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-              <span class="sr-only">Next</span>
-              <svg class="w-2.5 h-2.5 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-              </svg>
-            </a>
-          </li>
+        <ul id="pagination" class="flex items-center -space-x-px h-8 text-sm sm:text-xs">
+       
         </ul>
-      </nav>
+    </nav>
 
       <div class="mt-6">
         <h2 class="font-poppins font-bold flex justify-center">Subscribe to our newsletter to get updates to our latest collections</h2>
@@ -237,7 +149,8 @@
           Copyright ©2024 stylefox. All rights reserved.
         </p>
       </footer>
-      
+      <script src="/js/global.js"></script>
 <script src="/js/catalog.js"></script>
+
 </body>
 </html>
