@@ -8,19 +8,100 @@
     <title>Document</title>
     <link rel="stylesheet" href="./../css/output.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <header>
+
+    <header class="relative">
+        <!-- Bannière promotionnelle -->
+        <div class="bg-slate-500 py-3 hidden sm:block" role="alert" aria-live="polite">
+            <div class="flex items-center justify-center gap-2 text-white">
+                <p class="text-sm">Sign up and <span class="font-semibold">GET 20% OFF</span> your first order.
+                    <a href="#"
+                        class="text-sm font-semibold hover:text-slate-200 transition-colors duration-300 underline underline-offset-2">Sign
+                        up now</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Navigation principale -->
+        <nav class="flex items-center justify-between px-4 md:px-20 py-4 bg-white shadow-sm sticky top-0 z-50">
+            <a href="/" class="block hover:opacity-90 transition-opacity duration-300">
+                <img class="w-[100px] h-auto" src="/assets/icon/logo_black.png" alt="StyleFox Logo" width="100"
+                    height="40">
+            </a>
+
+            <!-- Menu et boutons d'action -->
+            <div class="flex items-center gap-6">
+                <button id="hamburger-btn" class="sm:hidden flex items-center text-gray-600 hover:text-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <!-- Navigation desktop -->
+                <ul class="sm:flex items-center gap-6 md:gap-8 hidden">
+                    <li><a href="/index.html" class="hover:text-slate-600 transition-colors duration-300">Home</a></li>
+                    <li><a href="catalog.html" class="hover:text-slate-600 transition-colors duration-300">Catalog</a>
+                    </li>
+                    <li><a href="About.html" class="hover:text-slate-600 transition-colors duration-300">About</a></li>
+                    <li><a href="#" class="hover:text-slate-600 transition-colors duration-300">Contact</a></li>
+
+                    <!-- Icônes utilisateur -->
+                    <li class="flex items-center gap-4 md:gap-6 ml-8">
+                        <button class="relative group hover:scale-110 transition-transform duration-300">
+                            <img class="w-6 h-6" src="/assets/icon/cart.svg" alt="Panier">
+                            <span
+                                class="absolute -top-2 -right-2 bg-slate-700 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                        </button>
+                        <button class="hover:scale-110 transition-transform duration-300">
+                            <img class="w-6 h-6" src="/assets/icon/user.svg" alt="Compte">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Menu mobile -->
+            <div id="mobile-menu"
+                class="fixed inset-0 bg-white transform translate-x-full transition-transform duration-300 ease-in-out sm:hidden z-50">
+                <div class="p-4">
+                    <button id="close-menu" class="absolute top-4 right-4 p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <ul class="space-y-4 mt-8">
+                        <li><a href="/index.html"
+                                class="block py-2 hover:bg-gray-100 transition-colors duration-300">Home</a></li>
+                        <li><a href="catalog.html"
+                                class="block py-2 hover:bg-gray-100 transition-colors duration-300">Catalog</a></li>
+                        <li><a href="About.html"
+                                class="block py-2 hover:bg-gray-100 transition-colors duration-300">About</a></li>
+                        <li><a href="#" class="block py-2 hover:bg-gray-100 transition-colors duration-300">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- ======== -->
+    <section>
         <h1 class="text-gray-500 font-bold text-[20px] text-center md:text-[40px]">About Us</h1>
         <p class="text-center text-[13px] px-[10px] pt-7 pb-20 md:text-[16px] ">
             Welcome to StyleFox We specialize in selling clothing, providing a
             simple, fast and transparent experience for our customers.
         </p>
-    </header>
+    </section>
     <section class="relative ">
         <img src="/assets/images/about-img1.jpg" alt="" class="w-4/5 mx-auto h-[32rem] md:h-[20rem]" />
      
@@ -65,22 +146,19 @@
         </div>
         <div class=" md:flex md:mt-[5rem] ">
             <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] border borde-black py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white ">
-                <i class=" text-[30px] " id="solid"></i>
-                <p class="py-3" id="rendy"></p>
+               
+                <p class="py-3 text-red" id="rendy"></p>
                 <p class="" id="select"></p>
                    
                
             </div>
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">
-                <i class=" text-[30px]" id="medal"></i>
-                <!-- <i class="fa-solid fa-medal text-[30px]" id="medal"></i> -->
+            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">  
                 <p class="py-3" id="superio"></p>
                 <p id="Material">
                 </p>
             </div>
             <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white">
                 <i class=" text-[30px]" id="user"></i>
-                <!-- <i class="fa-solid fa-users text-[30px]" id="user"></i> -->
                 <p class="py-3" id="detail"></p>
                 <p id="an"></p>
                     
@@ -90,21 +168,19 @@
         <div class="md:flex md:mt-[6rem]  md:hidden" id="icons">
             <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white" id="test1">
                 <i class=" text-[30px]" id="truck"></i>
-                <!-- <i class="fa-solid fa-truck text-[30px]" id="truck"></i> -->
                 <p class="py-3" id="flex"> </p>
                 <p  id="provide">
                    
                 </p>
             </div>
             <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white" id="test">
-                <i class="fa-solid fa-headset  text-[30px]" id="head"></i>
                 <p class="py-3" id="live"></p>
                 <p  id="instant">
                     
                 </p>
             </div>
             <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-orange-600 to-blue-500 group-hover:from-orange-600 group-hover:to-blue-500 hover:text-white dark:text-white" id="test">
-                <i class="fa-brands fa-square-instagram text-[30px]" id="squar"></i>
+
                 <p class="py-3" id="social"></p>
                 <p id="enable">
                     
@@ -121,23 +197,23 @@
         <div class="bg-[#d9d9d948] mt-9 md:pl-12 shadow-xl">
             <div class="pt-6  ml-4 ">
                 <div class=" text " >
-                    <p class="font-bold text-[16px] md:text-[23px] contenu">What are the delivery times?</p>
+                    <p class="font-bold text-[16px] md:text-[23px]">What are the delivery times?</p>
         
                
                   
                     <img src="/assets/images/flech-d.png" alt="" class="flesh" >
                   
                 </div>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden flesh-Text contenu">Delivery times vary depending on your location and option chosen, but
-                    generally you will receive your
-                    order within 3-5 business days</p>
+                <p class="text-[12px] md:text-[16px] md:pt-3  flesh-Text hidden md:hidden contenu1" id="para">Delivery times vary depending on your location and option chosen, but
+                    generally you will receive your  order within 3-5 business days</p>
+                   
             </div>
             <div class="pt-6 ml-4">
                 <div class="text">
                     <p class="font-bold text-[16px] md:text-[23px]">What payment methods do you accept?</p>
                     <img src="/assets/images/flech-d.png" alt="" class="flesh" >
                 </div>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden contenu">We accept payment by credit card, PayPal, and other secure payment methods available at checkout.
+                <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden  contenu2">We accept payment by credit card, PayPal, and other secure payment methods available at checkout.
                     </p>
             </div>
             <div class="pt-6  ml-4">
@@ -146,7 +222,7 @@
                     <p class="font-bold text-[16px] md:text-[23px]">How can I return an item?</p>
                     <img src="/assets/images/flech-d.png" alt=""  class="flesh" >
                 </div>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden contenu">If you are not satisfied with your purchase, you may return an item within 30 days of receipt, provided it is in its original condition.
+                <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden contenu3">If you are not satisfied with your purchase, you may return an item within 30 days of receipt, provided it is in its original condition.
                    </p>
             </div>
             <div class="py-6   ml-4">
@@ -154,93 +230,17 @@
                 <p class="font-bold text-[16px] md:text-[23px]"> Are the items available in stock?</p>
                 <img src="/assets/images/flech-d.png" alt=""  class="flesh" >
                </div>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden contenu">We regularly update item availability information on our site. If a product is out of stock, you can sign up to be notified when it is back in stock</p>
+                <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden contenu4">We regularly update item availability information on our site. If a product is out of stock, you can sign up to be notified when it is back in stock</p>
             </div>
 
     </section>
 
     <section class="flex relative mt-[4rem]  w-[100%] overflow-hidden md:overflow-hidden  md:w-[100%]" id="carousel">
       
-            
-            <div class="min-w-[18rem] ml-[10px] md:ml-[1rem] mt-10 ">
-                <img src="/assets/images/about1.jpg" alt=""  class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] " >
-                <p class="text-[12px] font-bold  mt-[1rem] ">Thomas R, Marseille</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">I have purchased several items on StyleFox and I am not disappointed!</p>
-            </div>
-            
-            
-            <div class="min-w-[18rem] h-[12rem] ml-[-70px] md:ml-[2rem]  mt-10">
-                <img src="/assets/images/about2.jpg" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">Elise B., Toulouse</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">I love the collection offered by StyleFox. The clothes are modern, comfortable and
-                    available in all sizes</p>
-            </div>
-            <div class="min-w-[18rem] ml-[-70px] md:ml-[2rem] mt-10 ">
-                <img src="/assets/images/about3.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">Liam T., Customer</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">StyleFox has become my go-to place for all my fashion needs. The clothes are both
-                    stylish and comfortable. </p>
-            </div>
-            <div class="min-w-[18rem] ml-[-70px] md:ml-[2rem] mt-10 ">
-                <img src="/assets/images/about4.webp" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">Emma R., Customer</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">I've had a fantastic experience shopping with StyleFox. The quality of the clothes is
-                    top-notch.</p>
-            </div>
-            <div class="min-w-[18rem] ml-[-70px] md:ml-[2rem] mt-10 ">
-                <img src="/assets/images/about5.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">John D., Customer</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">Shopping with StyleFox was a breeze! The website was easy to navigate, and I found exactly what I was looking for.</p>
-            </div>
-            <div class="min-w-[18rem] ml-[-70px] md:ml-[2rem] mt-10 ">
-                <img src="/assets/images/about6.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">Sarah M., Customer</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">I am absolutely in love with StyleFox! The clothing is stylish, comfortable, and the quality is outstanding</p>
-            </div>
-            <div class="min-w-[18rem] ml-[-70px] md:ml-[2rem] mt-10 ">
-                <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-            </div>
-            <div class="min-w-[18rem] ml-[-70px] md:ml-[2rem] mt-10">
-                <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-            </div>
-            <div class="min-w-[18rem] ml-[-70px] md:ml-[2rem] mt-10  slide">
-                <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-            </div> 
-            <div class="min-w-[18rem] ml-[-70px] md:ml-[2rem] mt-10  slide">
-                <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-            </div>
-            <div class="min-w-[18rem] ml-[-70px] md:ml-[2rem] mt-10 slide">
-                <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-            </div>
-            <div class="min-w-[18rem] ml-[-70px] md:ml-[2rem] mt-10  slide">
-                <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-            </div>
-            <div class="min-w-[18rem] ml-[-70px] md:ml-[2rem] mt-10  slide">
-                <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-                <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-                <p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-            </div>
-       
-        <!-- <button>
-            <img src="/assets/images/flech-d.png" alt="" class="md:w-[2rem] absolute md:right-2 right-2 md:top-[12rem] top-[7rem] hover:opacity-45 w-[20px] ">
-            <img src="/assets/images/flech-g.png" alt="" class="md:w-[2rem] absolute md:left-2 left-2 md:top-[12rem] top-[7rem] hover:opacity-45 w-[20px] next">
-        </button> -->
     </section>
 
 
-
+    <script src="../js/global.js"></script>
     <script src="../js/About.js"></script>
 </body>
 
