@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navshdaow{
+    box-shadow: 0 0 4px #00000025;
+}
+
+.headerbg{
+    background-image: url('./../assets/images/headerbg1.webp');
+    background-color: #00000052;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

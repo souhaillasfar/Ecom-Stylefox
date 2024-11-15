@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./../css/output.css">
-    <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -95,7 +96,7 @@
 
 
     <!-- ======== -->
-    <section>
+    <section class="mt-[4rem]">
         <h1 class="text-gray-500 font-bold text-[20px] text-center md:text-[40px]">About Us</h1>
         <p class="text-center text-[13px] px-[10px] pt-7 pb-20 md:text-[16px] ">
             Welcome to StyleFox We specialize in selling clothing, providing a
@@ -192,43 +193,45 @@
 
     </section>
 
+
     <section class="mt-10">
         <h3 class="text-[20px] text-center md:text-[3rem]" id="">FAQ</h3>
         <div class="bg-[#d9d9d948] mt-9 md:pl-12 shadow-xl">
-            <div class="pt-6  ml-4 ">
-                <div class=" text " >
+
+            <div class="pt-6  ml-4">
+                <div class=" text flex justify-between " >
                     <p class="font-bold text-[16px] md:text-[23px]">What are the delivery times?</p>
         
-               
-                  
-                    <img src="/assets/images/flech-d.png" alt="" class="flesh" >
+                    <img src="/assets/images/flech-d.png" alt="" class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]" >
                   
                 </div>
                 <p class="text-[12px] md:text-[16px] md:pt-3  flesh-Text hidden md:hidden contenu1" id="para">Delivery times vary depending on your location and option chosen, but
                     generally you will receive your  order within 3-5 business days</p>
                    
             </div>
-            <div class="pt-6 ml-4">
-                <div class="text">
+            <div class="pt-6 ml-4 ">
+                <div class="text flex justify-between">
+
                     <p class="font-bold text-[16px] md:text-[23px]">What payment methods do you accept?</p>
-                    <img src="/assets/images/flech-d.png" alt="" class="flesh" >
+    
+                    <img src="/assets/images/flech-d.png" alt="" class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]" >
                 </div>
                 <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden  contenu2">We accept payment by credit card, PayPal, and other secure payment methods available at checkout.
                     </p>
             </div>
             <div class="pt-6  ml-4">
-                <div class="text">
+                <div class="text flex justify-between">
                     
                     <p class="font-bold text-[16px] md:text-[23px]">How can I return an item?</p>
-                    <img src="/assets/images/flech-d.png" alt=""  class="flesh" >
+                    <img src="/assets/images/flech-d.png" alt=""  class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]">
                 </div>
                 <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden contenu3">If you are not satisfied with your purchase, you may return an item within 30 days of receipt, provided it is in its original condition.
                    </p>
             </div>
             <div class="py-6   ml-4">
-                 <div class="text">
+                 <div class="text flex justify-between">
                 <p class="font-bold text-[16px] md:text-[23px]"> Are the items available in stock?</p>
-                <img src="/assets/images/flech-d.png" alt=""  class="flesh" >
+                <img src="/assets/images/flech-d.png" alt=""  class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]" >
                </div>
                 <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden contenu4">We regularly update item availability information on our site. If a product is out of stock, you can sign up to be notified when it is back in stock</p>
             </div>
@@ -239,6 +242,68 @@
       
     </section>
 
+
+    <!-- Footer responsive -->
+    <footer class="bg-[#1D242D] text-white py-8 mt-[5rem]">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-8">
+                <!-- Logo et description -->
+                <div class="col-span-1 sm:col-span-2 md:col-span-1">
+                    <img src="/assets/icon/logo_white.png" alt="StyleFox Logo" class="w-32 h-auto mb-4">
+                    <p class="text-sm text-[#D7D7D7]">Offers modern, affordable clothing for Men, Women and Kids,
+                        perfect for everyday wear.</p>
+                </div>
+
+                <!-- Liens de navigation -->
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Shop</h2>
+                    <ul class="space-y-2 text-sm text-[#D7D7D7]">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">All products</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Men</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Women</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Company</h2>
+                    <ul class="space-y-2 text-sm text-[#D7D7D7]">
+                        <li><a href="About.html" class="hover:text-white transition-colors duration-300">About us</a>
+                        </li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Affiliates</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-lg font-semibold mb-4">Support</h2>
+                    <ul class="space-y-2 text-sm text-[#D7D7D7]">
+                        <li><a href="About.html#faq" class="hover:text-white transition-colors duration-300">FAQs</a>
+                        </li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+                <!-- Méthodes de paiement -->
+                <div class="col-span-1 sm:col-span-2 md:col-span-1">
+                    <h2 class="text-lg font-semibold mb-4">Payment Methods</h2>
+                    <div class="flex space-x-4">
+                        <img src="/assets/icon/mastercard.png" alt="Mastercard" class="h-8">
+                        <img src="/assets/icon/paypal.png" alt="PayPal" class="h-8">
+                        <img src="/assets/icon/visa-logo.png" alt="Visa" class="h-8">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Séparateur -->
+            <div class="border-t border-[#D7D7D7] my-6"></div>
+
+            <!-- Copyright -->
+            <p class="text-center text-sm text-[#D7D7D7]">
+                stylefox Copyright ©2024. All right reserved
+            </p>
+        </div>
+    </footer>
 
     <script src="../js/global.js"></script>
     <script src="../js/About.js"></script>

@@ -5,7 +5,24 @@ let test =document.getElementById('test1');
 let showLess = document.getElementById("showLess");
 
 
+// Gestion du menu mobile
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenuBtn = document.getElementById('close-menu');
 
+    // Ouvrir le menu
+    hamburgerBtn.addEventListener('click', function () {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.add('translate-x-0');
+    });
+
+    // Fermer le menu
+    closeMenuBtn.addEventListener('click', function () {
+        mobileMenu.classList.remove('translate-x-0');
+        mobileMenu.classList.add('translate-x-full');
+    });
+});
 
 
 showMore.addEventListener('click',function(){
@@ -233,6 +250,7 @@ fetch(window.products)
         
     
 })
+
 
 
 
