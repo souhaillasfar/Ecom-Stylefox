@@ -1,80 +1,102 @@
+// Get DOM elements
 const closeShopping = document.querySelector('#closeShopping');
-let Product = JSON.parse(localStorage.getItem("products"))||[]
-console.log(closeShopping)
+const shopping = document.querySelector('#shopping');
+const cartItems = document.querySelector('#cartItems');
+const subtotalAmount = document.querySelector('#subtotalAmount');
 
-// close the shopping cart
+// Initialize cart array from localStorage or empty array if none exists
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-
-closeShopping.addEventListener("click",function(){
-    
-    shopping.classList.add("hidden");
-})
-
-const minus = document.querySelector('#minus')
-const plus = document.querySelector('#plus')
-const num = document.querySelector('#num')
-
-let x = 1;
-
-plus.addEventListener("click",()=>{
-    x++;
-    console.log("x");
-    num.innerText = x;
-   
-});
-
-
-minus.addEventListener("click",()=>{
-
-    if(x>1){
-        x--;
-        num.innerText = x;
-
+// Function to update cart display
+function updateCartDisplay() {
+    if (cart.length === 0) {
+        cartItems.innerHTML = `
+            <div class="text-center py-8">
+                <h3 class="text-gray-500">Your cart is empty</h3>
+            </div>
+        `;
+        subtotalAmount.textContent = '$0.00';
+        return;
     }
-    console.log("x");
-   
+
+    let total = 0;
+    cartItems.innerHTML = cart.map((item, index) => {
+        total += item.price * item.quantity;
+        return `
+            <div class="flex items-center gap-4 pb-6 border-b border-gray-200 mb-6">
+                <img src="${item.image}" alt="${item.name}" class="h-40 w-25 object-cover rounded-md">
+                <div class="flex-1">
+                    <h3 class="text-base font-medium text-gray-900">${item.name}</h3>
+                    <p class="text-gray-500">${item.size || ''}</p>
+                    
+                    <div class="flex items-center gap-4 mt-4">
+                        <div class="flex items-center border rounded-full">
+                            <button onclick="decreaseQuantity(${index})" class="px-3 py-1 hover:bg-gray-100 rounded-l-full">-</button>
+                            <span class="px-4 py-1">${item.quantity}</span>
+                            <button onclick="increaseQuantity(${index})" class="px-3 py-1 hover:bg-gray-100 rounded-r-full">+</button>
+                        </div>
+                        <span class="text-base font-medium">$${(item.price * item.quantity).toFixed(2)}</span>
+                    </div>
+                    
+                    <button onclick="removeItem(${index})" class="text-sm text-red-500 mt-2">Remove</button>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    subtotalAmount.textContent = `$${total.toFixed(2)}`;
+}
+
+// Function to add item to cart
+function addToCart(item) {
+    const existingItemIndex = cart.findIndex(i => i.name === item.name && i.size === item.size);
+    
+    if (existingItemIndex !== -1) {
+        cart[existingItemIndex].quantity++;
+    } else {
+        cart.push({
+            ...item,
+            quantity: 1
+        });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+}
+
+// Function to increase quantity
+function increaseQuantity(index) {
+    cart[index].quantity++;
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+}
+
+// Function to decrease quantity
+function decreaseQuantity(index) {
+    if (cart[index].quantity > 1) {
+        cart[index].quantity--;
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+}
+
+// Function to remove item
+function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+}
+
+// Close shopping cart (you can implement this later)
+closeShopping.addEventListener('click', () => {
+    shopping.classList.add('hidden');
 });
 
-const item1 ={
+// Initial cart render
+updateCartDisplay();
 
-    "title": "tshirt",
-    "picture": "hada",
-    "price": 11,
-    "quantity":23
-
-   }
-   const item2 ={
-
-    "title": "tshirt",
-    "picture": "hada",
-    "price": 11,
-    "quantity":23
-
-   }
-   const item3 ={
-
-    "title": "tshirt",
-    "picture": "hada",
-    "price": 11,
-    "quantity":23
-
-   }
-
-// if(Product.Length != 0){
-//   console.log('hhhhh')
-// }else{
-        
-  if (Product == 0) {
-    Product.push(item1)
-
-    Product.push(item2)
-    
- 
-    Product.push(item3)
-       
-  
-    
-  }
-  localStorage.setItem("products",JSON.stringify(Product))
-  console.log(Product)
-// }
+// Make functions available globally
+window.addToCart = addToCart;
+window.increaseQuantity = increaseQuantity;
+window.decreaseQuantity = decreaseQuantity;
+window.removeItem = removeItem;

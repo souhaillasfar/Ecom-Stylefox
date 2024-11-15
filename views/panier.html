@@ -7,119 +7,49 @@
     <link rel="stylesheet" href="../css/output.css">
 </head>
 <body>
-  <!-- Modal backdrop -->
-<div id="shopping" class="fixed inset-0 z-50 overflow-hidden">
-  <!-- Dark overlay -->
-  <div class="fixed inset-0 bg-black bg-opacity-50 transition-opacity"></div>
-  
-  <!-- Modal container -->
-  <div class="fixed inset-0 overflow-hidden">
-    <div class="absolute inset-0 overflow-hidden">
-      <!-- Modal panel -->
-      <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full">
-        <div class="pointer-events-auto w-screen max-w-md">
-          <!-- Cart content -->
-          <div class="flex h-full flex-col bg-white shadow-xl">
-            <!-- Header -->
-            <div class="bg-black px-4 py-6 sm:px-6">
-              <div class="flex items-center justify-between">
-                <h2 class="text-lg font-medium text-white">Shopping Cart</h2>
-                <button id="closeShopping" class="text-white hover:text-gray-300">
-                  <span class="sr-only">Close panel</span>
-                  <!-- X icon -->
-                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            <!-- item -->
-            <!-- Cart Container -->
-           <div class="shopping-list">
-            <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-              
-              <!-- Cart Items Container -->
-              <div class="details">
-                
-                <!-- Cart Item -->
-                <div class="cart-item flex items-center justify-between border-b border-gray-200 pb-6">
-                  
-                  <!-- Product Image and Details -->
-                  <div class="flex items-center space-x-4">
-                    
-                    <!-- Product Image -->
-                    <img src="../assets/images/products-73-600x820 1.png" alt="Product image" class="h-40 w-25 object-cover rounded-md">
-                    
-                    <!-- Product Details -->
-                    <div>
-                      
-                      <!-- Product Name -->
-                      <h3 class="text-base font-medium text-gray-900">River Jacket - Black, L</h3>
-                      
-                      <!-- Quantity and Price -->
-                      <div class="quantityandprice flex items-center space-x-4 mt-4">
-                        
-                        <!-- Quantity Controls -->
-                        <div class="flex items-center border rounded-full">
-                          <button id="minus" class="px-3 py-1 hover:bg-gray-100 rounded-l-full">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
-                            </svg>
-                          </button>
-                          <span id="num" class="px-4 py-1">1</span>
-                          <button id="plus" class="px-3 py-1 hover:bg-gray-100 rounded-r-full">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
-                            </svg>
-                          </button>
-                        </div>
-                        
-                        <!-- Price Display -->
-                        <div class="flex flex-col items-end space-y-2">
-                          <span class="text-base font-medium text-gray-900 ml-5">$115.00</span>
-                        </div>
-                        
-                      </div>
-                      
-                      <!-- Remove Button -->
-                      <button class="mt-1 text-sm text-gray-500 ml-3">Remove</button>
-                      
-                    </div>
-                  </div>
-                  
+  <div id="shopping" class="fixed inset-0 z-50 overflow-hidden">
+    <div class="fixed inset-0 bg-black bg-opacity-50"></div>
+    
+    <div class="fixed inset-0 overflow-hidden">
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full">
+          <div class="pointer-events-auto w-screen max-w-md">
+            <div class="flex h-full flex-col bg-white shadow-xl">
+              <!-- Header -->
+              <div class="bg-black px-4 py-6 sm:px-6">
+                <div class="flex items-center justify-between">
+                  <h2 class="text-lg font-medium text-white">Shopping Cart</h2>
+                  <button id="closeShopping" class="text-white hover:text-gray-300">
+                    <span class="sr-only">Close panel</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
                 </div>
-                
               </div>
 
-              
-
-            </div>
-
-
-           </div>
-            <!-- End item -->
-
-
-            <!-- Subtotal Section -->
-            <div class="subtotal flex justify-between text-base font-medium bg-black px-4 py-6 sm:px-6 text-white">
-              <p>Subtotal</p>
-              <p>$115.00</p>
-            </div>
-
-
-            <!-- Footer -->
-            <div class="mt-48 border-t border-red-200 px-4 py-6 sm:px-6 bg-black px-4 py-6 sm:px-6">
-              <div class="">
-              <div class="flex gap-2 ">
-                
-                <button class="w-full bg-black  border border-gray-300 rounded-lg text-white px-6 py-1 text-base font-medium hover:bg-gray-900">
-                  Devis
-                </button>
-                <button class="w-full bg-white text-black  border-gray-300 rounded-lg px-6 text-base font-medium hover:bg-gray-50">
-                  Confirm
-                </button>
+              <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                <div id="cartItems">
+                  <!-- Cart items will be inserted here -->
+                </div>
               </div>
+
+              <!-- Subtotal -->
+              <div class="subtotal flex justify-between text-base font-medium bg-black px-4 py-6 sm:px-6 text-white">
+                <p>Subtotal</p>
+                <p id="subtotalAmount">$0.00</p>
+              </div>
+
+              <!-- Buttons -->
+              <div class="border-t border-red-200 px-4 py-6 sm:px-6 bg-black">
+                <div class="flex gap-2">
+                  <button class="w-full bg-black border border-gray-300 rounded-lg text-white px-6 py-1 text-base font-medium hover:bg-gray-900">
+                    Devis
+                  </button>
+                  <button class="w-full bg-white text-black border-gray-300 rounded-lg px-6 text-base font-medium hover:bg-gray-50">
+                    Confirm
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -127,7 +57,16 @@
       </div>
     </div>
   </div>
-</div>
-<script src="../js/panier.js"></script>
+  <script src="../js/shop.js"></script>
 </body>
 </html>
+
+
+<!-- <button onclick="addToCart({
+    name: 'Product Name',
+    price: 99.99,
+    image: '../path/to/image.jpg',
+    size: 'L'  // optional
+})" class="bg-black text-white px-4 py-2 rounded-lg">
+    Add to Cart
+</button> -->
