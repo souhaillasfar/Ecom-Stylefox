@@ -14,7 +14,7 @@
         rel="stylesheet">
 </head>
 
-<body class="bg-gray-100 font-poppins">
+<body class="bg-gray-100 font-poppins" onload="isexist()">
     <!-- En-tête avec bannière promotionnelle et navigation -->
     <header class="relative">
         <!-- Bannière promotionnelle -->
@@ -55,7 +55,7 @@
                     <!-- Icônes utilisateur -->
                     <li class="flex items-center gap-4 md:gap-6 ml-8">
                         <button class="relative group hover:scale-110 transition-transform duration-300">
-                            <img class="w-6 h-6" src="/assets/icon/cart.svg" alt="Panier">
+                            <a href="Panier.html"><img class="w-6 h-6" src="/assets/icon/cart.svg" alt="Panier"></a>
                             <span
                                 class="absolute -top-2 -right-2 bg-slate-700 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
                         </button>
@@ -94,29 +94,29 @@
     <!-- Contenu principal -->
     <main class="container mx-auto px-4 py-8">
         <!-- Section détails produit -->
-        <section class="bg-white rounded-xl shadow-lg p-6">
+        <section id="product_section" class="bg-white rounded-xl shadow-lg p-6">
             <!-- Grille produit responsive -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Galerie d'images -->
-                <div class="space-y-4">
+                <div id="product_images" class="space-y-4">
                     <div class="aspect-square bg-white rounded-xl overflow-hidden shadow-sm">
                         <img src="/assets/images/about-img33.png" alt="Cat&Dog Hoodie - Vue principale"
                             class="w-full h-full object-cover" id="main-product-image">
                     </div>
                     <div class="grid grid-cols-4 gap-4">
-                        <button class="product-thumbnail transition-transform duration-300 hover:scale-105"
+                        <button class="product-thumbnail w-fit transition-transform duration-300 hover:scale-105"
                             onclick="updateMainImage(this)">
                             <img src="/assets/images/about-img33.png" alt="" class="w-20 h-20 object-cover rounded">
                         </button>
-                        <button class="product-thumbnail transition-transform duration-300 hover:scale-105"
+                        <button class="product-thumbnail w-fit transition-transform duration-300 hover:scale-105"
                             onclick="updateMainImage(this)">
                             <img src="/assets/images/about-img77.png" alt="" class="w-20 h-20 object-cover rounded">
                         </button>
-                        <button class="product-thumbnail transition-transform duration-300 hover:scale-105"
+                        <button class="product-thumbnail w-fit transition-transform duration-300 hover:scale-105"
                             onclick="updateMainImage(this)">
                             <img src="/assets/images/about2.jpg" alt="" class="w-20 h-20 object-cover rounded">
                         </button>
-                        <button class="product-thumbnail transition-transform duration-300 hover:scale-105"
+                        <button class="product-thumbnail w-fit transition-transform duration-300 hover:scale-105"
                             onclick="updateMainImage(this)">
                             <img src="/assets/images/about6.png" alt="" class="w-20 h-20 object-cover rounded">
                         </button>
@@ -124,8 +124,8 @@
                 </div>
 
                 <!-- Informations produit -->
-                <div class="space-y-8">
-                    <h1 class="text-3xl font-bold mb-2">Cat&Dog Hoodie</h1>
+                <div id="info" class="space-y-8">
+                    <h1 id="titre" class="text-3xl font-bold mb-2">Cat&Dog Hoodie</h1>
                     <div class="flex items-center space-x-2 mb-4">
                         <div class="text-yellow-400">★★★★☆</div>
                         <span class="text-gray-500">(4.0)</span>
@@ -136,9 +136,9 @@
 
                     <!-- Prix et réduction -->
                     <div class="flex items-baseline space-x-3">
-                        <span class="text-3xl font-bold text-green-600">50.00 $</span>
-                        <span class="text-lg text-gray-500 line-through">75.00 $</span>
-                        <span class="text-sm font-semibold bg-slate-200 text-red-600 rounded px-2">25% OFF</span>
+                        <span id="prix" class="text-3xl font-bold text-green-600" onchange="updatePrice()">50.00 $</span>
+                        <span id="prix_de_base" class="text-lg text-gray-500 line-through">75.00 $</span>
+                        <span id="reduction" class="text-sm font-semibold bg-slate-200 text-red-600 rounded px-2">25% OFF</span>
                     </div>
 
                     <!-- Options de sélection -->
@@ -147,7 +147,7 @@
                         <div class="w-full md:w-1/3">
                             <label for="size" class="block text-sm font-medium text-gray-700">Size</label>
                             <select id="size"
-                                class="mt-2 block w-full bg-white border border-gray-300 rounded-md shadow-sm">
+                                class="mt-2 block w-full bg-white border border-gray-300 rounded-md shadow-sm" onchange="updatePrice()">
                                 <option value="">Choisir la taille</option>
                                 <option value="XS">XS</option>
                                 <option value="S">S</option>
@@ -200,7 +200,7 @@
 
                     <!-- Bouton d'action -->
                     <button
-                        class="w-full bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300">
+                        class="w-full bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors duration-300" onclick="">
                         Ajouter au panier
                     </button>
                 </div>
@@ -302,6 +302,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="/js/global.js"></script>
     <script src="/js/Detailles.js"></script>
 </body>
 
