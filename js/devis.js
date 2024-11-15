@@ -65,3 +65,5 @@ function generateInvoice(cart) {
 }
 
 window.generateInvoice = generateInvoice;
+
+// fin de devis
