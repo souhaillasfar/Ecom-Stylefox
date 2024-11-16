@@ -52,7 +52,7 @@
 
             <h1 class="sm:max-w-[80%] md:max-w-[70%] mx-auto text-center text-white font-semibold sm:text-[40px] md:text-[40px] lg:text-[50px] sm:mt-10 md:mt-16 lg:mt-20">It is a long established fact that a reader will be distracted</h1>
 
-            <a href="#" class="bg-white block w-fit font-medium mx-auto px-6 py-2 text-xs rounded-md mt-4">Shop now</a>
+            <a href="./views/catalog.html" class="bg-white block w-fit font-medium mx-auto px-6 py-2 text-xs rounded-md mt-4">Shop now</a>
         </div>
     </header>
     <main class="sm:w-[95%] md:w-[90%] mx-auto">
@@ -102,13 +102,13 @@
             <div class="flex justify-between">
                 <h1 class="text-primary font-semibold sm:text-xl md:text-2xl">Categories</h1>
                 <div class="flex gap-x-2">
-                    <button class="block"><img class="sm:size-5 md:size-6" src="./assets/icon/left-arrow.svg" alt="left arrow"></button>
-                    <button class="block"><img class="sm:size-5 md:size-6" src="./assets/icon/right-arrow.svg" alt="right arrow"></button>
+                    <button onclick="previousPageSubcategory()" class="block"><img class="sm:size-5 md:size-6" src="./assets/icon/left-arrow.svg" alt="left arrow"></button>
+                    <button onclick="nextPageSubcategory()" class="block"><img class="sm:size-5 md:size-6" src="./assets/icon/right-arrow.svg" alt="right arrow"></button>
                 </div>
             </div>
 
-            <div class="mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div class="relative">
+            <div id="subcategory-container" class="mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- <div class="relative">
                     <img class="w-full h-[250px] object-cover" src="https://img.ltwebstatic.com/images3_pi/2024/01/17/23/17054640503d536567bfe67f5797f3a85fc76221cd_wk_shein.webp" alt="category image">
                     <a href="#" class="bg-white block absolute bottom-4 left-0 right-0 mx-auto w-[80%] px-4 py-2 text-xs font-medium rounded-md">Hoodies</a>
                 </div>
@@ -139,7 +139,7 @@
                 <div class="relative">
                     <img class="w-full h-[250px] object-cover" src="https://img.ltwebstatic.com/images3_pi/2024/01/17/23/17054640503d536567bfe67f5797f3a85fc76221cd_wk_shein.webp" alt="category image">
                     <a href="#" class="bg-white block absolute bottom-4 left-0 right-0 mx-auto w-[80%] px-4 py-2 text-xs font-medium rounded-md">Hoodies</a>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -152,73 +152,12 @@
                 <div class="relative">
                     <img class="w-full sm:h-[300px] md:h-[400px] object-cover" src="./assets/images/business.png" alt="category image">
                     <div class="sm:w-full md:w-[calc(100%+40px)] h-fit absolute m-auto inset-0 md:left-[-20px] flex justify-between">
-                        <button class="rounded-full shadow-lg bg-white flex items-center justify-center w-10 h-10"><img class="size-5" src="./assets/icon/left-arrow.svg" alt=""></button>
-                        <button class="rounded-full shadow-lg bg-white flex items-center justify-center w-10 h-10"><img class="size-5" src="./assets/icon/right-arrow.svg" alt=""></button>
+                        <button id="previousTopProducts" class="rounded-full shadow-lg bg-white flex items-center justify-center w-10 h-10"><img class="size-5" src="./assets/icon/left-arrow.svg" alt=""></button>
+                        <button id="nextTopProducts" class="rounded-full shadow-lg bg-white flex items-center justify-center w-10 h-10"><img class="size-5" src="./assets/icon/right-arrow.svg" alt=""></button>
                     </div>
                 </div>
 
-                <div class="w-[95%] mt-[-110px] relative mx-auto flex overflow-hidden gap-x-4">
-                    <div class="sm:min-w-[200px] md:min-w-[250px]">
-                        <img class="w-full sm:h-[220px] md:h-[300px]" src="https://img.ltwebstatic.com/images3_pi/2023/08/15/47/16920706223633a42746e0beb80444ba430ee9452e.webp" alt="product image">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="mt-2 text-sm font-medium">Autumn Dress</p>
-                                <span class="font-semibold mt-2">58$</span>
-                            </div>
-                            <div class="bg-primary rounded-md px-2 py-2 flex items-center justify-center cursor-pointer">
-                                <img class="size-4" src="./assets/icon/whitecart.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sm:min-w-[200px] md:min-w-[250px]">
-                        <img class="w-full sm:h-[220px] md:h-[300px]" src="https://img.ltwebstatic.com/images3_pi/2023/08/15/47/16920706223633a42746e0beb80444ba430ee9452e.webp" alt="product image">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="mt-2 text-sm font-medium">Autumn Dress</p>
-                                <span class="font-semibold mt-2">58$</span>
-                            </div>
-                            <div class="bg-primary rounded-md px-2 py-2 flex items-center justify-center cursor-pointer">
-                                <img class="size-4" src="./assets/icon/whitecart.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sm:min-w-[200px] md:min-w-[250px]">
-                        <img class="w-full sm:h-[220px] md:h-[300px]" src="https://img.ltwebstatic.com/images3_pi/2023/08/15/47/16920706223633a42746e0beb80444ba430ee9452e.webp" alt="product image">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="mt-2 text-sm font-medium">Autumn Dress</p>
-                                <span class="font-semibold mt-2">58$</span>
-                            </div>
-                            <div class="bg-primary rounded-md px-2 py-2 flex items-center justify-center cursor-pointer">
-                                <img class="size-4" src="./assets/icon/whitecart.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sm:min-w-[200px] md:min-w-[250px]">
-                        <img class="w-full sm:h-[220px] md:h-[300px]" src="https://img.ltwebstatic.com/images3_pi/2023/08/15/47/16920706223633a42746e0beb80444ba430ee9452e.webp" alt="product image">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="mt-2 text-sm font-medium">Autumn Dress</p>
-                                <span class="font-semibold mt-2">58$</span>
-                            </div>
-                            <div class="bg-primary rounded-md px-2 py-2 flex items-center justify-center cursor-pointer">
-                                <img class="size-4" src="./assets/icon/whitecart.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sm:min-w-[200px] md:min-w-[250px]">
-                        <img class="w-full sm:h-[200px] md:h-[300px]" src="https://img.ltwebstatic.com/images3_pi/2023/08/15/47/16920706223633a42746e0beb80444ba430ee9452e.webp" alt="product image">
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="mt-2 text-sm font-medium">Autumn Dress</p>
-                                <span class="font-semibold mt-2">58$</span>
-                            </div>
-                            <div class="bg-primary rounded-md px-2 py-2 flex items-center justify-center cursor-pointer">
-                                <img class="size-4" src="./assets/icon/whitecart.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div id="topcontainer" class="w-[95%] mt-[-110px] relative mx-auto flex overflow-hidden gap-x-4"></div>
             </div>
         </section>
 
@@ -273,6 +212,8 @@
         <hr class="mt-10 mb-4">
         <p class="text-center text-[#D7D7D7] text-xs">Copyright ©2024 stylefox. All right reserved</p>
     </footer>
+    <script src="./js/global.js"></script>
     <script src="./js/homecarrousel.js"></script>
+    <script src="./js/home.js"></script>
 </body>
 </html>
