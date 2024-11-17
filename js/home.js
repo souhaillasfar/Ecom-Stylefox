@@ -91,7 +91,7 @@ function scrollCarousel(direction) {
 document.getElementById('previousTopProducts').addEventListener('click', () => scrollCarousel('previous'))
 document.getElementById('nextTopProducts').addEventListener('click', () => scrollCarousel('next'))
 
-const addToCart = (e) => {
+const addItemToCart = (e) => {
     const product = products.find(item => item.id == e)
     const cart = JSON.parse(localStorage.getItem('cart')) || []
     const found = cart.findIndex(item => item.name == product.title)
@@ -111,7 +111,7 @@ const addToCart = (e) => {
 
 document.addEventListener('click', (e) => {
     if(e.target && e.target.classList.contains('addtocart')){
-        addToCart(e.target.getAttribute('productid'))
+        addItemToCart(e.target.getAttribute('productid'))
     }
 })
 
