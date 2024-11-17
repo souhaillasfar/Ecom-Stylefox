@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="StyleFox is an online store offering modern and affordable clothing for men, women, and children. The site features a clear, responsive interface with product filters and a newsletter subscription option for discounts. It accepts multiple payment methods, including MasterCard, PayPal, and Visa.">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <link rel="stylesheet" href="./../css/output.css">
+    <title>StyleFox</title>
+</head>
+<body>
+  
+    <header>
+        <div class="bg-[#1D242D] text-white font-poppins w-full h-6 py-3 flex items-center justify-center">
+            <p class="text-white text-center text-xs">Sign up and <span class="font-semibold">GET 20% FOR</span> your first order.  <a href="#" class="font-semibold">Sign up now</a></p>
+        </div>
+        <nav class="flex items-center justify-between px-[8%] py-2 navshdaow">
+            <img class="w-[80px]" src="/assets/icon/logo 3.png" alt="logo">
+
+            <ul class="flex items-center text-sm gap-4">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="catalog.html">Catalog</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li class="ml-8">
+                   <a href="shop.html"> <img class="size-5" src="/assets/icon/cart.svg" alt="cart icon"></a>
+                </li>
+                <li>
+                    <a href="#"><img class="size-5" src="/assets/icon/user.svg" alt="user icon"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section class="font-poppins mt-6 md:flex lg:flex gap-32 pb-3 sm:grid sm:justify-center">
+        <form class="lg:block md:block w-full sm:w-full md:w-1/3 lg:w-1/4 h-full pl-8 ml-2 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class=" sm:flex-col  sm:justify-center j ">
+                <h3 id="btn"  class="text-black mt-2 font-bold ">Categories <i class=" ml-8 fa-solid fa-chevron-down" style="color: #808080;"></i></h3>
+                <div id="list" style="display: none;">
+                    
+            
+          </div>
+        </div>
+        </form>
+        <form id="produit_container" class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 sm:w-full md:w-[100%] lg:w-[80%] sm:justify-center gap-11 gap-y-4">
+        
+        </form>
+    </section>
+
+
+      <div id="produit_container"></div>
+
+    <nav class="flex justify-center mt-6" aria-label="Page navigation example">
+        <ul id="pagination" class="flex items-center -space-x-px h-8 text-sm sm:text-xs">
+       
+        </ul>
+    </nav>
+  
+      <div class="mt-6">
+        <h2 class="font-poppins font-bold flex justify-center">Subscribe to our newsletter to get updates to our latest collections</h2>
+        <p class="mt-3 font-poppins text-xs text-gray-500 flex justify-center">Get 20% off on your first order just by subscribing to our newsletter</p>
+      </div>
+    
+    <div class="mt-8 mb-8 flex md:flex-row md:justify-center sm:flex-col  sm:items-center lg:flex-row lg:justify-center">
+         <input type="email" id="email" placeholder="Enter your email" class="bg-white border border-gray-300 text-gray-900 md:w-64 mb-2 md:mb-0 md:me-4 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+         <button type="submit" class=" text-white bg-[#1D242D] hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-48  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Subscribe</button>
+    </div>
+
+
+    <footer class="bg-[#1D242D] text-white font-poppins w-full h-auto py-8">
+        <form class="px-4 sm:px-8 md:px-10 lg:px-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+          <div>
+            <h2 class="text-xl">StyleFox</h2>
+            <p class="mt-4 text-xs text-[#D7D7D7]">
+              Offers modern, <br>affordable clothing for Men, <br>Women, and Kids, perfect for everyday wear.
+            </p>
+          </div>
+          <div>
+            <h2 class="text-l">Shop</h2>
+            <p class="mt-4 text-xs text-[#D7D7D7]">
+              All products <br> Men <br> Women
+            </p>
+          </div>
+          <div>
+            <h2 class="text-l">Company</h2>
+            <p class="mt-4 text-xs text-[#D7D7D7]">
+              About us <br> Contact <br> Affiliates
+            </p>
+          </div>
+          <div>
+            <h2 class="text-l">Support</h2>
+            <p class="mt-4 text-xs text-[#D7D7D7]">
+              FAQs <br> Cookie Policy <br> Terms of Use
+            </p>
+          </div>
+          <div>
+            <h2 class="text-l">Payment</h2>
+            <div class="flex mt-2 gap-4">
+              <img src="/assets/icon/mastercard.png" alt="mastercard" class="h-6">
+              <img src="/assets/icon/paypal.png" alt="paypal" class="h-6">
+              <img src="/assets/icon/visa-logo.png" alt="visa-logo" class="h-6">
+            </div>
+          </div>
+        </form>
+        <div class="border-t border-[#D7D7D7] my-6 mx-auto w-[80%]"></div>
+        <p class="font-poppins text-center text-xs text-[#D7D7D7]">
+          Copyright ©2024 stylefox. All rights reserved.
+        </p>
+      </footer>
+      <script src="/js/global.js"></script>
+<script src="/js/catalog.js"></script>
+
+</body>
+</html>
