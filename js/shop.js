@@ -7,6 +7,7 @@ const subtotalAmount = document.querySelector('#subtotalAmount');
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function updateCartDisplay() {
+    cart = JSON.parse(localStorage.getItem('cart')) || [];
     if (cart.length === 0) {
         cartItems.innerHTML = `
             <div class="text-center py-8">
