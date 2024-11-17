@@ -13,43 +13,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
-    
     <header>
-    <div class="bg-primary py-3">
-        <p class="text-white text-center text-xs">Sign up and <span class="font-semibold">GET 20% FOR</span> your first order.  <a href="#" class="font-semibold">Sign up now</a></p>
-    </div>
-    <nav class="flex items-center justify-between sm:px-[5%] lg:px-[8%] py-2 navshdaow">
-        <img class="w-[80px]" src="./../assets/icon/logo.png" alt="logo">
-
-        <ul class="flex items-center text-sm sm:gap-2 md:gap-4">
-            <li>
-                <a class="sm:hidden md:block" href="#">Home</a>
-            </li>
-            <li>
-                <a class="sm:hidden md:block" href="#">Catalog</a>
-            </li>
-            <li>
-                <a class="sm:hidden md:block" href="#">About</a>
-            </li>
-            <li>
-                <a class="sm:hidden md:block" href="#">Contact</a>
-            </li>
-            <li class="ml-8">
-                <img class="size-5" src="./../assets/icon/cart.svg" alt="cart icon">
-            </li>
-            <li>
-                <a href="#" class="sm:hidden md:block"><img class="size-5" src="./../assets/icon/user.svg" alt="user icon"></a>
-            </li>
-            <li>
-                <a class="md:hidden" href="#"><img class="size-5" src="./../assets/icon/menu.svg" alt="user icon"></a>
-            </li>
-        </ul>
-    </nav>
-</header>
+        <div class="bg-primary py-3">
+          <p class="text-white text-center text-xs">Sign up and <span class="font-semibold">GET 20% FOR</span> your first order.  <a href="#" class="font-semibold">Sign up now</a></p>
+      </div>
+      <nav class="flex items-center justify-between sm:px-[5%] lg:px-[8%] py-2 navshdaow">
+          <img class="w-[80px]" src="/assets/icon/logo_black.png" alt="logo">
+  
+          <ul class="flex items-center text-sm sm:gap-2 md:gap-4">
+              <li>
+                  <a class="sm:hidden md:block" href="/index.html">Home</a>
+              </li>
+              <li>
+                  <a class="sm:hidden md:block" href="/views/catalog.html">Catalog</a>
+              </li>
+              <li>
+                  <a class="sm:hidden md:block" href="/views/About.html">About</a>
+              </li>
+              <li>
+                  <a class="sm:hidden md:block" href="#">Contact</a>
+              </li>
+              <li id="openShopping" class="ml-8">
+                  <img class="size-5 cursor-pointer" src="/assets/icon/cart.svg" alt="cart icon">
+              </li>
+              <li>
+                  <a href="#" class="sm:hidden md:block"><img class="size-5" src="/assets/icon/user.svg" alt="user icon"></a>
+              </li>
+              <li id="home-burger">
+                  <img class="size-5 block md:hidden cursor-pointer" src="/assets/icon/menu.svg" alt="burdermenu icon">
+              </li>
+          </ul>
+  
+          <div id="mobilemenu" class="sm:block md:hidden fixed w-[80%] h-full top-0 right-[-80%] px-4 py-10 bg-primary text-white z-10">
+              <div class="flex justify-end">
+                  <i id="close-burger" class="fa-solid fa-x home-close block text-[20px] cursor-pointer"></i>
+              </div>
+              <div class="*:block *:text-center *:py-4 *:text-xl *:font-light mt-6">
+                  <a href="/index.html">Home</a>
+                  <a href="/views/catalog.html">Catalog</a>
+                  <a href="/views/About.html">About</a>
+                  <a href="#">Contact</a>
+                  <a href="#">Login</a>
+              </div>
+          </div>
+      </nav>
+      </header>
     <!-- ======== -->
     <section class="mt-[4rem]">
         <h1 class="text-gray-500 font-bold text-[20px] text-center md:text-[40px]">About Us</h1>
@@ -61,7 +75,7 @@
     <section class="relative ">
         <img src="/assets/images/about-img1.jpg" alt="" class="w-4/5 mx-auto h-[32rem] md:h-[20rem]" />
      
-         <div class="w-48 bg-[#faf8f890] absolute top-8 left-[10rem] md:top-[6rem] md:left-[15rem]">
+         <div class="w-48 bg-[#faf8f890] absolute top-8 left-[8rem] md:top-[6rem] md:left-[15rem]">
              <p class="text-[#1E5FB9] font-bold text-center text-[15px] py-3">
                  Personalized service
              </p>
@@ -70,7 +84,7 @@
                  property
              </p>
          </div>
-         <div class="w-48 bg-[#faf8f890] absolute top-48 left-[10rem] md:top-[6rem] md:left-[34rem]">
+         <div class="w-48 bg-[#faf8f890] absolute top-48 left-[8rem] md:top-[6rem] md:left-[34rem]">
              <p class="text-[#1E5FB9] font-bold text-center text-[15px] py-3">
                  Personalized service
              </p>
@@ -79,7 +93,7 @@
                  property
              </p>
          </div>
-         <div class="w-48 bg-[#faf8f890] absolute top-[22rem] left-[10rem] md:top-[6rem] md:left-[54rem]">
+         <div class="w-48 bg-[#faf8f890] absolute top-[22rem] left-[8rem] md:top-[6rem] md:left-[54rem]">
              <p class="text-[#1E5FB9] font-bold text-center text-[15px] py-3">
                  Personalized service
              </p>
@@ -159,7 +173,7 @@
                     <img src="/assets/images/flech-d.png" alt="" class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]" >
                   
                 </div>
-                <p class="text-[12px] md:text-[16px] md:pt-3  flesh-Text hidden md:hidden contenu1 " id="para">Delivery times vary depending on your location and option chosen, but
+                <p class="text-[12px] md:text-[16px] md:pt-3  mr-24 flesh-Text hidden md:hidden contenu1 " id="para">Delivery times vary depending on your location and option chosen, but
                     generally you will receive your  order within 3-5 business days</p>
                    
             </div>
@@ -170,7 +184,7 @@
     
                     <img src="/assets/images/flech-d.png" alt="" class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]" >
                 </div>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden  contenu2">We accept payment by credit card, PayPal, and other secure payment methods available at checkout.
+                <p class="text-[12px] md:text-[16px] md:pt-3 mr-24 hidden md:hidden  contenu2">We accept payment by credit card, PayPal, and other secure payment methods available at checkout.
                     </p>
             </div>
             <div class="pt-6  ml-4">
@@ -179,7 +193,7 @@
                     <p class="font-bold text-[16px] md:text-[23px]">How can I return an item?</p>
                     <img src="/assets/images/flech-d.png" alt=""  class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]">
                 </div>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden contenu3">If you are not satisfied with your purchase, you may return an item within 30 days of receipt, provided it is in its original condition.
+                <p class="text-[12px] md:text-[16px] md:pt-3 mr-24 hidden md:hidden contenu3">If you are not satisfied with your purchase, you may return an item within 30 days of receipt, provided it is in its original condition.
                    </p>
             </div>
             <div class="py-6   ml-4">
@@ -187,7 +201,7 @@
                 <p class="font-bold text-[16px] md:text-[23px]"> Are the items available in stock?</p>
                 <img src="/assets/images/flech-d.png" alt=""  class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]" >
                </div>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden contenu4">We regularly update item availability information on our site. If a product is out of stock, you can sign up to be notified when it is back in stock</p>
+                <p class="text-[12px] md:text-[16px] md:pt-3 mr-24 hidden md:hidden contenu4">We regularly update item availability information on our site. If a product is out of stock, you can sign up to be notified when it is back in stock</p>
             </div>
 
     </section>
@@ -196,49 +210,106 @@
                                 
         
         </section>
-
-
-    <footer class="mt-[100px] bg-primary sm:px-[4rem] md:px-[4rem] lg:px-[5rem] pt-[3rem] pb-[1rem]">
-        <div class="md:flex md:gap-x-[80px] lg:gap-x-[100px] sm:w-fit mx-auto md:w-full">
-            <div class="md:w-[25%]">
-                <h1 class="text-white font-semibold text-xl">StyleFox</h1>
-                <p class="text-[#D7D7D7] mt-2 text-xs">Offers modern, affordable clothing for Men, Women, and Kids, perfect for everyday wear</p>
+        <section>
+            
+        <div id="shopping" class="fixed inset-0 z-50 overflow-hidden hidden">
+            <div class="fixed inset-0 bg-black bg-opacity-50"></div>
+            
+            <div class="fixed inset-0 overflow-hidden">
+              <div class="absolute inset-0 overflow-hidden">
+                <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full">
+                  <div class="pointer-events-auto w-screen max-w-md">
+                    <div class="flex h-full flex-col bg-white shadow-xl">
+                      <!-- Header -->
+                      <div class="bg-black px-4 py-6 sm:px-6">
+                        <div class="flex items-center justify-between">
+                          <h2 class="text-lg font-medium text-white">Shopping Cart</h2>
+                          <button id="closeShopping" class="text-white hover:text-gray-300">
+                            <span class="sr-only">Close panel</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+        
+                      <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                        <div id="cartItems">
+                          <!-- Cart items will be inserted here -->
+                        </div>
+                      </div>
+        
+                      <!-- Subtotal -->
+                      <div class="subtotal flex justify-between text-base font-medium bg-black px-4 py-6 sm:px-6 text-white">
+                        <p>Subtotal</p>
+                        <p id="subtotalAmount">$0.00</p>
+                      </div>
+        
+                      <!-- Buttons -->
+                      <div class="border-t border-red-200 px-4 py-6 sm:px-6 bg-black">
+                        <div class="flex gap-2">
+                          <button id="devisButton" class="w-full bg-black border border-gray-300 rounded-lg text-white px-6 py-1 text-base font-medium hover:bg-gray-900">
+                                Devis
+                          </button>
+                          <button class="w-full bg-white text-black border-gray-300 rounded-lg px-6 text-base font-medium hover:bg-gray-50">
+                                Confirm
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="md:w-[75%] grid md:grid-cols-4 gap-y-6 sm:mt-6 md:mt-0">
-                <div>
-                    <h1 class="text-white font-medium text-base mb-3">Shop</h1>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">All products</a>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Men</a>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Women</a>
+          </div> 
+        </section>
+
+
+        <footer class="mt-[100px] bg-primary sm:px-[4rem] md:px-[4rem] lg:px-[5rem] pt-[3rem] pb-[1rem]">
+            <div class="md:flex md:gap-x-[80px] lg:gap-x-[100px] sm:w-fit mx-auto md:w-full">
+                <div class="md:w-[25%]">
+                    <h1 class="text-white font-semibold text-xl">StyleFox</h1>
+                    <p class="text-[#D7D7D7] mt-2 text-xs">Offers modern, affordable clothing for Men, Women, and Kids, perfect for everyday wear</p>
                 </div>
-                <div>
-                    <h1 class="text-white font-medium text-base mb-3">Company</h1>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">About us</a>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Contact</a>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Affiliates</a>
-                </div>
-                <div>
-                    <h1 class="text-white font-medium text-base mb-3">Support</h1>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">FAQs</a>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Cookie Policy</a>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Terms of Use</a>
-                </div>
-                <div>
-                    <h1 class="text-white font-medium text-base mb-2">Payment</h1>
-                    <div class="flex items-center gap-x-1">
-                        <img class="bg-cover h-fit" src="./../assets/icon/icmastercard.png" alt="mastercard icon">
-                        <img class="bg-cover h-fit" src="./../assets/icon/icvisa.png" alt="visa icon">
-                        <img class="bg-cover h-fit" src="./../assets/icon/icpaypal.png" alt="paypal icon">
+                <div class="md:w-[75%] grid md:grid-cols-4 gap-y-6 sm:mt-6 md:mt-0">
+                    <div>
+                        <h1 class="text-white font-medium text-base mb-3">Shop</h1>
+                        <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="/views/catalog.html">All products</a>
+                        <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="/views/catalog.html">Men</a>
+                        <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="/views/catalog.html">Women</a>
+                    </div>
+                    <div>
+                        <h1 class="text-white font-medium text-base mb-3">Company</h1>
+                        <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="/views/About.html">About us</a>
+                        <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Contact</a>
+                        <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Affiliates</a>
+                    </div>
+                    <div>
+                        <h1 class="text-white font-medium text-base mb-3">Support</h1>
+                        <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">FAQs</a>
+                        <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Cookie Policy</a>
+                        <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Terms of Use</a>
+                    </div>
+                    <div>
+                        <h1 class="text-white font-medium text-base mb-2">Payment</h1>
+                        <div class="flex items-center gap-x-1">
+                            <img class="bg-cover h-fit" src="/assets/icon/icmastercard.png" alt="mastercard icon">
+                            <img class="bg-cover h-fit" src="/assets/icon/icvisa.png" alt="visa icon">
+                            <img class="bg-cover h-fit" src="/assets/icon/icpaypal.png" alt="paypal icon">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <hr class="mt-10 mb-4">
-        <p class="text-center text-[#D7D7D7] text-xs">Copyright ©2024 stylefox. All right reserved</p>
-    </footer>
+            <hr class="mt-10 mb-4">
+            <p class="text-center text-[#D7D7D7] text-xs">Copyright Â©2024 stylefox. All right reserved</p>
+            </footer>
+      
 
     <script src="../js/global.js"></script>
     <script src="../js/About.js"></script>
+    <script src="./js/homecarrousel.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/shop.js"></script>
 </body>
 
 </html>
