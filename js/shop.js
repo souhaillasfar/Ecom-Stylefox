@@ -93,6 +93,7 @@ closeShopping.addEventListener('click', () => {
 // opening the shopping cart 
 openShopping.addEventListener('click', () => {
     shopping.classList.remove('hidden');
+    updateCartDisplay();
 });
 
 // Initial cart render
