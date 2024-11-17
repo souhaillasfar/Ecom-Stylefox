@@ -135,3 +135,13 @@ close.addEventListener('click', () => {
     menu.style.transition = 'right 700ms ease-in'
     menu.style.right = '-80%'
 })
+
+//newsletter
+const emailForm = document.getElementById('newsletter')
+const emailInput = document.getElementById('email')
+
+emailForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    alert('Your email is submitted to our newsletter.')
+    emailInput.value = ''
+})
