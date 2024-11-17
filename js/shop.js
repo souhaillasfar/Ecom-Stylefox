@@ -1,4 +1,5 @@
 const closeShopping = document.querySelector('#closeShopping');
+const openShopping = document.querySelector('#openShopping');
 const shopping = document.querySelector('#shopping');
 const cartItems = document.querySelector('#cartItems');
 const subtotalAmount = document.querySelector('#subtotalAmount');
@@ -89,6 +90,11 @@ closeShopping.addEventListener('click', () => {
     shopping.classList.add('hidden');
 });
 
+// opening the shopping cart 
+openShopping.addEventListener('click', () => {
+    shopping.classList.remove('hidden');
+});
+
 // Initial cart render
 updateCartDisplay();
 
@@ -100,4 +106,3 @@ window.removeItem = removeItem;
 document.getElementById('devisButton').addEventListener('click', () => {
     generateInvoice(cart);
 });
-// fin panier.js
