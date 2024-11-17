@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StyleFox | Home</title>
-    <link rel="stylesheet" href="./css/output.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover the latest fashion trends for men, women, and kids at unbeatable prices. Shop stylish clothes, accessories, and more. Fast shipping & easy returns.">
+        <meta name="keywords" content="fashion, clothing, online shopping, trendy clothes, affordable fashion, men's clothing, women's clothing, kids' clothing, accessories">
+        <title>StyleFox | Home</title>
+        <link rel="stylesheet" href="./css/output.css">
+        <script src="https://kit.fontawesome.com/3183b49327.js" crossorigin="anonymous"></script>
 </head>
 <body class="font-poppins overflow-x-hidden">
     <header>
@@ -16,13 +19,13 @@
 
             <ul class="flex items-center text-sm sm:gap-2 md:gap-4">
                 <li>
-                    <a class="sm:hidden md:block" href="#">Home</a>
+                    <a class="sm:hidden md:block" href="./index.html">Home</a>
                 </li>
                 <li>
-                    <a class="sm:hidden md:block" href="#">Catalog</a>
+                    <a class="sm:hidden md:block" href="./views/catalog.html">Catalog</a>
                 </li>
                 <li>
-                    <a class="sm:hidden md:block" href="#">About</a>
+                    <a class="sm:hidden md:block" href="./views/About.html">About</a>
                 </li>
                 <li>
                     <a class="sm:hidden md:block" href="#">Contact</a>
@@ -33,10 +36,23 @@
                 <li>
                     <a href="#" class="sm:hidden md:block"><img class="size-5" src="./assets/icon/user.svg" alt="user icon"></a>
                 </li>
-                <li>
-                    <a class="md:hidden" href="#"><img class="size-5" src="./assets/icon/menu.svg" alt="user icon"></a>
+                <li id="home-burger">
+                    <img class="size-5 block md:hidden cursor-pointer" src="./assets/icon/menu.svg" alt="burdermenu icon">
                 </li>
             </ul>
+
+            <div id="mobilemenu" class="sm:block md:hidden fixed w-[80%] h-full top-0 right-[-80%] px-4 py-10 bg-primary text-white z-10">
+                <div class="flex justify-end">
+                    <i id="close-burger" class="fa-solid fa-x home-close block text-[20px] cursor-pointer"></i>
+                </div>
+                <div class="*:block *:text-center *:py-4 *:text-xl *:font-light mt-6">
+                    <a href="./index.html">Home</a>
+                    <a href="./views/catalog.html">Catalog</a>
+                    <a href="./views/About.html">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Login</a>
+                </div>
+            </div>
         </nav>
 
         <div id="headerbody" class="min-h-[500px] mt-1 headerbg p-4 sm:pb-6 md:pb-0">
@@ -150,13 +166,13 @@
             <div class="md:w-[75%] grid md:grid-cols-4 gap-y-6 sm:mt-6 md:mt-0">
                 <div>
                     <h1 class="text-white font-medium text-base mb-3">Shop</h1>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">All products</a>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Men</a>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Women</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="./views/catalog.html">All products</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="./views/catalog.html">Men</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="./views/catalog.html">Women</a>
                 </div>
                 <div>
                     <h1 class="text-white font-medium text-base mb-3">Company</h1>
-                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">About us</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="./views/About.html">About us</a>
                     <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Contact</a>
                     <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Affiliates</a>
                 </div>

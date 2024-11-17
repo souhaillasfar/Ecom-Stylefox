@@ -96,7 +96,6 @@ const addToCart = (e) => {
     const cart = JSON.parse(localStorage.getItem('cart')) || []
     const found = cart.findIndex(item => item.name == product.title)
     if(found == -1){
-        console.log(found)
         cart.push({
             image: product.variants[0].images[0],
             name: product.title,
@@ -105,6 +104,8 @@ const addToCart = (e) => {
             price: product.variants[0].price
         })
         localStorage.setItem('cart', JSON.stringify(cart))
+
+        alert('Product added successfully to cart !')
     }
 } 
 
@@ -114,7 +115,23 @@ document.addEventListener('click', (e) => {
     }
 })
 
-
-//function calls
+//fetch functions calls
 fetchSubcategories()
 fetchProducts()
+//end f c 
+
+//burger menu
+
+let open = document.getElementById('home-burger')
+let close = document.getElementById('close-burger')
+let menu = document.getElementById('mobilemenu')
+
+open.addEventListener('click', () => {
+    menu.style.transition = 'right 700ms ease-in'
+    menu.style.right = 0
+})
+
+close.addEventListener('click', () => {
+    menu.style.transition = 'right 700ms ease-in'
+    menu.style.right = '-80%'
+})
