@@ -50,7 +50,6 @@ const fetchProducts = async () => {
         const response = await fetch(window.products)
         const data = await response.json()
         products = [...data]
-        console.log(products)
         displayTopProducts()
     }catch(e){
         console.error(e)
@@ -64,12 +63,12 @@ const displayTopProducts = () => {
             <div class="topcard sm:min-w-[200px] md:min-w-[250px] cursor-pointer">
                 <img class="w-full sm:h-[220px] md:h-[300px]" src="${item.variants[0].images[0]}" alt="product image">
                 <div class="flex items-center justify-between">
-                <div>
-                <p class="mt-2 text-sm font-medium">${item.title.length > 14 ? item.title.slice(0, 14)+'...' : item.title }</p>
-                <span class="font-semibold mt-2">${item.variants[0].price}$</span>
-                </div>
-                <div class="bg-primary rounded-md px-2 py-2 flex items-center justify-center cursor-pointer">
-                <img class="size-4" src="./assets/icon/whitecart.svg" alt="cart icon">
+                    <div>
+                        <p class="mt-2 text-sm font-medium">${item.title.length > 14 ? item.title.slice(0, 14)+'...' : item.title }</p>
+                        <span class="font-semibold mt-2">${item.variants[0].price}$</span>
+                    </div>
+                    <div productid="${item.id}" class="addtocart bg-primary rounded-md px-2 py-2 flex items-center justify-center cursor-pointer">
+                        <img productid="${item.id}" class="addtocart size-4" src="./assets/icon/whitecart.svg" alt="cart icon">
                     </div>
                 </div>
             </div>
@@ -91,6 +90,30 @@ function scrollCarousel(direction) {
 
 document.getElementById('previousTopProducts').addEventListener('click', () => scrollCarousel('previous'))
 document.getElementById('nextTopProducts').addEventListener('click', () => scrollCarousel('next'))
+
+const addToCart = (e) => {
+    const product = products.find(item => item.id == e)
+    const cart = JSON.parse(localStorage.getItem('cart')) || []
+    const found = cart.findIndex(item => item.name == product.title)
+    if(found == -1){
+        console.log(found)
+        cart.push({
+            image: product.variants[0].images[0],
+            name: product.title,
+            size: product.variants[0].sizes[0],
+            quantity: 1,
+            price: product.variants[0].price
+        })
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }
+} 
+
+document.addEventListener('click', (e) => {
+    if(e.target && e.target.classList.contains('addtocart')){
+        addToCart(e.target.getAttribute('productid'))
+    }
+})
+
 
 //function calls
 fetchSubcategories()
