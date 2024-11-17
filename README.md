@@ -100,7 +100,7 @@ Fadwa : Page à propos avec FAQ et avis clients.
 Clonez le dépôt :
 bash
 Copy code
-git clone https://github.com/your-repo/stylefox.git  
+git clone https://github.com/souhaillasfar/Ecom-Stylefox.git
 
 
 Lancez le fichier index.html dans un navigateur.
