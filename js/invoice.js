@@ -1,9 +1,10 @@
 function generateInvoice(cart) {
+    
     // to create new PDF document
     const doc = new jspdf.jsPDF();
 
 
-    doc.addImage('../assets/icon/logo.png', 'PNG', 5, 5, 37, 25);
+    doc.addImage('../assets/icon/logoforthepdf.png', 'PNG', 5, 5, 37, 25);
     doc.setFontSize(28);
     doc.text('INVOICE', 15, 55, { align: 'left' });
 

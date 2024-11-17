@@ -100,4 +100,3 @@ window.removeItem = removeItem;
 document.getElementById('devisButton').addEventListener('click', () => {
     generateInvoice(cart);
 });
-// fin panier.js
