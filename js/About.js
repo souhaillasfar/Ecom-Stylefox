@@ -168,7 +168,7 @@ flesh.forEach((fleshElement, index) => {
 
 
 
-fetch(window.products)
+fetch('https://ahmedbenkrarayc.github.io/ecommercedata/products.json')
 
 .then(result=>result.json())
 .then(function(data){
@@ -178,7 +178,7 @@ fetch(window.products)
         let gray = 5 - parseInt(item.rate)
         
         const element = document.createElement('div')
-        element.className = 'min-w-[18rem] ml-[10px] md:ml-[1rem] mt-10'
+        element.className = 'min-w-[18rem]  md:ml-[3rem] ml-[-50px] mt-10'
         element.innerHTML += `<img src="${item.variants[0].images[0]}" alt=""  class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] " >`
         element.innerHTML += `<p class="text-[12px] font-bold  mt-[1rem] ">${item.title}</p>`
         element.innerHTML += `<p class="text-[12px] text-slate-800 mt-[10px] w-[13rem] md:min-w-[18rem]">${item.description}</p>`
