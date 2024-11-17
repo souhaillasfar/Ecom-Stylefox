@@ -219,7 +219,7 @@ function displayProducts(products) {
                 <img src="${product.variants[0].images[0]}" alt="Image produit" class="image">
                 <div class="image flex gap-12 p-2">
                     <div class="">
-                    <a target="_blank" href="/Detailles.html?id=${product.id}">
+                    <a target="_blank" href="/views/Detailles.html?id=${product.id}">
                         <h2 class="title font-poppins">${product.title}</h2></a>
                         <p class="text-gray-500 mt-10"> ${product.variants.length} color</p>
                     </div>
