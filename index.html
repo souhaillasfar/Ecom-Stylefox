@@ -30,8 +30,8 @@
                 <li>
                     <a class="sm:hidden md:block" href="#">Contact</a>
                 </li>
-                <li class="ml-8">
-                    <img class="size-5" src="./assets/icon/cart.svg" alt="cart icon">
+                <li id="openShopping" class="ml-8">
+                    <img class="size-5 cursor-pointer" src="./assets/icon/cart.svg" alt="cart icon">
                 </li>
                 <li>
                     <a href="#" class="sm:hidden md:block"><img class="size-5" src="./assets/icon/user.svg" alt="user icon"></a>
@@ -156,6 +156,57 @@
             </div>
         </section>
 
+        <div id="shopping" class="fixed inset-0 z-50 overflow-hidden hidden">
+            <div class="fixed inset-0 bg-black bg-opacity-50"></div>
+            
+            <div class="fixed inset-0 overflow-hidden">
+              <div class="absolute inset-0 overflow-hidden">
+                <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full">
+                  <div class="pointer-events-auto w-screen max-w-md">
+                    <div class="flex h-full flex-col bg-white shadow-xl">
+                      <!-- Header -->
+                      <div class="bg-black px-4 py-6 sm:px-6">
+                        <div class="flex items-center justify-between">
+                          <h2 class="text-lg font-medium text-white">Shopping Cart</h2>
+                          <button id="closeShopping" class="text-white hover:text-gray-300">
+                            <span class="sr-only">Close panel</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+        
+                      <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                        <div id="cartItems">
+                          <!-- Cart items will be inserted here -->
+                        </div>
+                      </div>
+        
+                      <!-- Subtotal -->
+                      <div class="subtotal flex justify-between text-base font-medium bg-black px-4 py-6 sm:px-6 text-white">
+                        <p>Subtotal</p>
+                        <p id="subtotalAmount">$0.00</p>
+                      </div>
+        
+                      <!-- Buttons -->
+                      <div class="border-t border-red-200 px-4 py-6 sm:px-6 bg-black">
+                        <div class="flex gap-2">
+                          <button id="devisButton" class="w-full bg-black border border-gray-300 rounded-lg text-white px-6 py-1 text-base font-medium hover:bg-gray-900">
+                                Devis
+                          </button>
+                          <button class="w-full bg-white text-black border-gray-300 rounded-lg px-6 text-base font-medium hover:bg-gray-50">
+                                Confirm
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+
     </main>
     <footer class="mt-[100px] bg-primary sm:px-[4rem] md:px-[4rem] lg:px-[5rem] pt-[3rem] pb-[1rem]">
         <div class="md:flex md:gap-x-[80px] lg:gap-x-[100px] sm:w-fit mx-auto md:w-full">
@@ -198,5 +249,8 @@
     <script src="./js/global.js"></script>
     <script src="./js/homecarrousel.js"></script>
     <script src="./js/home.js"></script>
+    <script src="./js/shop.js"></script>
+    <script src="./js/invoice.js"></script>
+    <script src="./assets/icon/logoforthepdf.png"></script>
 </body>
 </html>
