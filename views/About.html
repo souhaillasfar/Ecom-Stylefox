@@ -3,22 +3,61 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./../css/output.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
+    
     <header>
+    <div class="bg-primary py-3">
+        <p class="text-white text-center text-xs">Sign up and <span class="font-semibold">GET 20% FOR</span> your first order.  <a href="#" class="font-semibold">Sign up now</a></p>
+    </div>
+    <nav class="flex items-center justify-between sm:px-[5%] lg:px-[8%] py-2 navshdaow">
+        <img class="w-[80px]" src="./../assets/icon/logo.png" alt="logo">
+
+        <ul class="flex items-center text-sm sm:gap-2 md:gap-4">
+            <li>
+                <a class="sm:hidden md:block" href="#">Home</a>
+            </li>
+            <li>
+                <a class="sm:hidden md:block" href="#">Catalog</a>
+            </li>
+            <li>
+                <a class="sm:hidden md:block" href="#">About</a>
+            </li>
+            <li>
+                <a class="sm:hidden md:block" href="#">Contact</a>
+            </li>
+            <li class="ml-8">
+                <img class="size-5" src="./../assets/icon/cart.svg" alt="cart icon">
+            </li>
+            <li>
+                <a href="#" class="sm:hidden md:block"><img class="size-5" src="./../assets/icon/user.svg" alt="user icon"></a>
+            </li>
+            <li>
+                <a class="md:hidden" href="#"><img class="size-5" src="./../assets/icon/menu.svg" alt="user icon"></a>
+            </li>
+        </ul>
+    </nav>
+</header>
+    <!-- ======== -->
+    <section class="mt-[4rem]">
         <h1 class="text-gray-500 font-bold text-[20px] text-center md:text-[40px]">About Us</h1>
         <p class="text-center text-[13px] px-[10px] pt-7 pb-20 md:text-[16px] ">
             Welcome to StyleFox We specialize in selling clothing, providing a
             simple, fast and transparent experience for our customers.
         </p>
-    </header>
+    </section>
     <section class="relative ">
         <img src="/assets/images/about-img1.jpg" alt="" class="w-4/5 mx-auto h-[32rem] md:h-[20rem]" />
      
@@ -52,7 +91,7 @@
       
     </section>
 
-    <section class="mt-10">
+    <section class="mt-10" id="mysection">
         <div class="text-center w-11/12 mx-auto">
             <h2 class="font-bold text-[20px] md:text-[30px] md:pt-10">Main features</h2>
             <p class="text-[#6B757D] pt-4 md:w-3/5 md:ml-[14rem]">
@@ -61,163 +100,145 @@
                 uniques.
             </p>
         </div>
-        <div class=" md:flex md:mt-[5rem]">
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] ">
-                <i class="fa-solid fa-users text-[30px]"></i>
-                <p class="py-3">rendy collection</p>
-                <p class="text-[#8B8484]">
-                    A selection of modern and stylish clothing for all tastes and all
-                    occasions.
+        <div class=" md:flex md:mt-[5rem] ">
+            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] border borde-black py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-white ">
+               
+                <p class="py-3 text-red font-bold" id="rendy"></p>
+                <p class="" id="select"></p>
+                   
+               
+            </div>
+            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-white">  
+                <p class="py-3 font-bold" id="superio"></p>
+                <p id="Material">
                 </p>
             </div>
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem]">
-                <i class="fa-solid fa-medal text-[30px]"></i>
-                <p class="py-3">Superior quality</p>
-                <p class="text-[#8B8484]">
-                    Materials carefully chosen to guarantee durability, comfort and aesthetics.
+            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-white">
+             
+                <p class="py-3 font-bold" id="detail"></p>
+                <p id="an"></p>
+                    
+              
+            </div>
+        </div>
+        <div class="md:flex md:mt-[6rem]  md:hidden" id="icons">
+            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-white" id="test1">
+                <p class="py-3 font-bold" id="flex"> </p>
+                <p  id="provide">
+                   
                 </p>
             </div>
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem]">
-                <i class="fa-solid fa-users text-[30px]"></i>
-                <p class="py-3">Detailed size guide </p>
-                <p class="text-[#8B8484]">
-                    An accurate size guide to help you find the perfect fit hassle-free.
+            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:to-blue-500 hover:text-white dark:text-white" id="test">
+                <p class="py-3 font-bold" id="live"></p>
+                <p  id="instant">
+                    
+                </p>
+            </div>
+            <div class=" text-center  w-4/5 mx-auto mt-9 md:w-[20rem] py-7 rounded-[10px] bg-gradient-to-br from-black to-blue-500  group-hover:bg-[#1b255a] hover:text-white dark:text-white" id="test">
+
+                <p class="py-3 font-bold" id="social"></p>
+                <p id="enable">
+                    
                 </p>
             </div>
         </div>
-        <div class="md:flex md:mt-[6rem] hidden md:hidden" id="icons">
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem] ">
-                <i class="fa-solid fa-truck text-[30px]"></i>
-                <p class="py-3">Flexible Shipping Options </p>
-                <p class="text-[#8B8484]">
-                    Provide different delivery options (standard, express, or pickup) and track orders in real-time.
-                </p>
-            </div>
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem]">
-                <i class="fa-solid fa-headset  text-[30px]"></i>
-                <p class="py-3">Live Chat Support</p>
-                <p class="text-[#8B8484]">
-                    Provide instant assistance to customers through live chat.
-                </p>
-            </div>
-            <div class="text-center  w-4/5 mx-auto mt-9 md:w-[20rem]">
-                <i class="fa-brands fa-square-instagram text-[30px]"></i>
-                <p class="py-3">Social Media Integration</p>
-                <p class="text-[#8B8484]">
-                    Enable easy sharing of products on social platforms..
-                </p>
-            </div>
-        </div>
-        <button class=" mt-10 ml-[11rem] bg-[#FF640B] px-[20px] py-[10px] font-bold rounded-xl md:ml-[36rem] md:mt-[4rem] hover:bg-slate-600 hover:text-white" id="showMore">Show More</button>
+        <button class=" mt-10 ml-[11rem] text-white bg-[#1b255a] px-[20px] py-[10px] font-bold rounded-xl md:ml-[36rem] md:mt-[4rem] hover:bg-[#1b405a]"  id="showMore">Show More</button>
+        <button class=" mt-10 ml-[11rem] text-white bg-[#1b255a] px-[20px] py-[10px] font-bold rounded-xl md:ml-[36rem] md:mt-[4rem] hover:bg-[#1b405a] hidden md:hidden"  id="showLess">Show Less</button>
+
     </section>
 
-    <section id="faq" class="mt-10">
-        <h3 class="text-[20px] text-center md:text-[3rem]">FAQ</h3>
-        <div class="bg-[#d9d9d948] mt-9 md:pl-12 ">
-            <div class="pt-6  ml-4 ">
-                <p class="font-bold text-[16px] md:text-[23px]">What are the delivery times?</p>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden">Delivery times vary depending on your location and option chosen, but
-                    generally you will receive your
-                    order within 3-5 business days</p>
+
+    <section class="mt-10">
+        <h3 class="text-[20px] text-center md:text-[3rem]" id="">FAQ</h3>
+        <div class="bg-[#d9d9d948] mt-9 md:pl-12 shadow-xl">
+
+            <div class="pt-6  ml-4">
+                <div class=" text flex justify-between " >
+                    <p class="font-bold text-[16px] md:text-[23px]">What are the delivery times?</p>
+        
+                    <img src="/assets/images/flech-d.png" alt="" class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]" >
+                  
+                </div>
+                <p class="text-[12px] md:text-[16px] md:pt-3  flesh-Text hidden md:hidden contenu1 " id="para">Delivery times vary depending on your location and option chosen, but
+                    generally you will receive your  order within 3-5 business days</p>
+                   
             </div>
-            <div class="pt-6 ml-4">
-                <p class="font-bold text-[16px] md:text-[23px]">What are the delivery times?</p>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden">Delivery times vary depending on your location and option chosen, but
-                    generally you will receive your
-                    order within 3-5 business days</p>
+            <div class="pt-6 ml-4 ">
+                <div class="text flex justify-between">
+
+                    <p class="font-bold text-[16px] md:text-[23px]">What payment methods do you accept?</p>
+    
+                    <img src="/assets/images/flech-d.png" alt="" class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]" >
+                </div>
+                <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden  contenu2">We accept payment by credit card, PayPal, and other secure payment methods available at checkout.
+                    </p>
             </div>
             <div class="pt-6  ml-4">
-                <p class="font-bold text-[16px] md:text-[23px]">What are the delivery times?</p>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden">Delivery times vary depending on your location and option chosen, but
-                    generally you will receive your
-                    order within 3-5 business days</p>
+                <div class="text flex justify-between">
+                    
+                    <p class="font-bold text-[16px] md:text-[23px]">How can I return an item?</p>
+                    <img src="/assets/images/flech-d.png" alt=""  class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]">
+                </div>
+                <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden contenu3">If you are not satisfied with your purchase, you may return an item within 30 days of receipt, provided it is in its original condition.
+                   </p>
             </div>
             <div class="py-6   ml-4">
-                <p class="font-bold text-[16px] md:text-[23px]">What are the delivery times?</p>
-                <p class="text-[12px] md:text-[16px] md:pt-3 hidden">Delivery times vary depending on your location and option chosen, but
-                    generally you will receive your
-                    order within 3-5 business days</p>
+                 <div class="text flex justify-between">
+                <p class="font-bold text-[16px] md:text-[23px]"> Are the items available in stock?</p>
+                <img src="/assets/images/flech-d.png" alt=""  class="flesh w-[1rem] h-[1rem] hover:opacity-[0.5] mr-[50px] mt-[10px]" >
+               </div>
+                <p class="text-[12px] md:text-[16px] md:pt-3 hidden md:hidden contenu4">We regularly update item availability information on our site. If a product is out of stock, you can sign up to be notified when it is back in stock</p>
             </div>
 
     </section>
 
-    <section class="flex relative mt-[4rem]">
-        <div class="w-[18rem] ml-[1rem] mt-10 ">
-            <img src="/assets/images/about1.jpg" alt=""  class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] " >
-            <p class="text-[12px] font-bold  mt-[1rem] ">Thomas R, Marseille</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]  ">I have purchased several items on StyleFox and I am not disappointed!</p>
-        </div>
-      
+        <section class="flex relative mt-[4rem]  w-[100%] overflow-hidden md:overflow-hidden  md:w-[100%] " id="carousel">
+                                
+        
+        </section>
 
-        <div class="w-[18rem] h-[12rem] ml-[2rem] mt-10">
-            <img src="/assets/images/about2.jpg" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">Elise B., Toulouse</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">I love the collection offered by StyleFox. The clothes are modern, comfortable and
-                available in all sizes</p>
-        </div>
-        <div class="w-[18rem] ml-6 mt-10">
-            <img src="/assets/images/about3.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">Liam T., Customer</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">StyleFox has become my go-to place for all my fashion needs. The clothes are both
-                stylish and comfortable. </p>
-        </div>
-        <div class="w-[18rem] ml-6 mt-10">
-            <img src="/assets/images/about4.webp" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">Emma R., Customer</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">I've had a fantastic experience shopping with StyleFox. The quality of the clothes is
-                top-notch.</p>
-        </div>
-        <div class="w-[18rem] ml-6 mt-10 hidden ">
-            <img src="/assets/images/about5.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">John D., Customer</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">Shopping with StyleFox was a breeze! The website was easy to navigate, and I found exactly what I was looking for.</p>
-        </div>
-        <div class="w-[18rem] ml-6 mt-10 hidden">
-            <img src="/assets/images/about6.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">Sarah M., Customer</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">I am absolutely in love with StyleFox! The clothing is stylish, comfortable, and the quality is outstanding</p>
-        </div>
-        <div class="w-[18rem] ml-6 mt-10 hidden">
-            <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-        </div>
-        <div class="w-[18rem] ml-6 mt-10 hidden">
-            <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-        </div>
-        <div class="w-[18rem] ml-6 mt-10 hidden">
-            <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-        </div>
-        <div class="w-[18rem] ml-6 mt-10 hidden">
-            <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-        </div>
-        <div class="w-[18rem] ml-6 mt-10 hidden">
-            <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-        </div>
-        <div class="w-[18rem] ml-6 mt-10 hidden">
-            <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-        </div>
-        <div class="w-[18rem] ml-6 mt-10 hidden">
-            <img src="/assets/images/about7.png" alt="" class="md:h-[22rem] md:w-[23rem] w-[11rem] h-[10rem] ">
-            <p class="text-[12px] font-bold pt-5">Olivia H., Customer</p>
-            <p class="text-[12px] text-slate-800 mt-[10px]">StyleFox has an amazing selection of clothing that suits all my fashion needs.</p>
-        </div>
-        <button>
-            <img src="/assets/images/flech-d.png" alt="" class="md:w-[2rem] absolute md:right-2 right-2 md:top-[12rem] top-[7rem] hover:opacity-45 w-[20px]">
-            <img src="/assets/images/flech-g.png" alt="" class="md:w-[2rem] absolute md:left-2 left-2 md:top-[12rem] top-[7rem] hover:opacity-45 w-[20px]">
-        </button>
-    </section>
 
+    <footer class="mt-[100px] bg-primary sm:px-[4rem] md:px-[4rem] lg:px-[5rem] pt-[3rem] pb-[1rem]">
+        <div class="md:flex md:gap-x-[80px] lg:gap-x-[100px] sm:w-fit mx-auto md:w-full">
+            <div class="md:w-[25%]">
+                <h1 class="text-white font-semibold text-xl">StyleFox</h1>
+                <p class="text-[#D7D7D7] mt-2 text-xs">Offers modern, affordable clothing for Men, Women, and Kids, perfect for everyday wear</p>
+            </div>
+            <div class="md:w-[75%] grid md:grid-cols-4 gap-y-6 sm:mt-6 md:mt-0">
+                <div>
+                    <h1 class="text-white font-medium text-base mb-3">Shop</h1>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">All products</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Men</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Women</a>
+                </div>
+                <div>
+                    <h1 class="text-white font-medium text-base mb-3">Company</h1>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">About us</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Contact</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Affiliates</a>
+                </div>
+                <div>
+                    <h1 class="text-white font-medium text-base mb-3">Support</h1>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">FAQs</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Cookie Policy</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Terms of Use</a>
+                </div>
+                <div>
+                    <h1 class="text-white font-medium text-base mb-2">Payment</h1>
+                    <div class="flex items-center gap-x-1">
+                        <img class="bg-cover h-fit" src="./../assets/icon/icmastercard.png" alt="mastercard icon">
+                        <img class="bg-cover h-fit" src="./../assets/icon/icvisa.png" alt="visa icon">
+                        <img class="bg-cover h-fit" src="./../assets/icon/icpaypal.png" alt="paypal icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-10 mb-4">
+        <p class="text-center text-[#D7D7D7] text-xs">Copyright ©2024 stylefox. All right reserved</p>
+    </footer>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/About.js"></script>
 </body>
 
 </html>

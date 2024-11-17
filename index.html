@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleFox | Home</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="font-poppins overflow-x-hidden">
+    <header>
+        <div class="bg-primary py-3">
+            <p class="text-white text-center text-xs">Sign up and <span class="font-semibold">GET 20% FOR</span> your first order.  <a href="#" class="font-semibold">Sign up now</a></p>
+        </div>
+        <nav class="flex items-center justify-between sm:px-[5%] lg:px-[8%] py-2 navshdaow">
+            <img class="w-[80px]" src="./assets/icon/logo.png" alt="logo">
+
+            <ul class="flex items-center text-sm sm:gap-2 md:gap-4">
+                <li>
+                    <a class="sm:hidden md:block" href="#">Home</a>
+                </li>
+                <li>
+                    <a class="sm:hidden md:block" href="#">Catalog</a>
+                </li>
+                <li>
+                    <a class="sm:hidden md:block" href="#">About</a>
+                </li>
+                <li>
+                    <a class="sm:hidden md:block" href="#">Contact</a>
+                </li>
+                <li class="ml-8">
+                    <img class="size-5" src="./assets/icon/cart.svg" alt="cart icon">
+                </li>
+                <li>
+                    <a href="#" class="sm:hidden md:block"><img class="size-5" src="./assets/icon/user.svg" alt="user icon"></a>
+                </li>
+                <li>
+                    <a class="md:hidden" href="#"><img class="size-5" src="./assets/icon/menu.svg" alt="user icon"></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="headerbody" class="min-h-[500px] mt-1 headerbg p-4 sm:pb-6 md:pb-0">
+            <div class="w-fit flex ml-auto">
+                <button id="go-previous" class="navigate block w-fit sm:px-[10px] sm:py-[5px] lg:px-[12px] lg:py-[6px] bg-white rounded-l-md">
+                    <img class="sm:size-[16px] md:size-[18px] lg:size-[20px]" src="./assets/icon/left-arrow.svg" alt="left arrow">
+                </button>
+                <span class="block bg-[#D9D9D9] w-[1px]"></span>
+                <button id="go-next" class="navigate block w-fit sm:px-[10px] sm:py-[5px] lg:px-[12px] lg:py-[6px] bg-white rounded-r-md">
+                    <img class="sm:size-[16px] md:size-[18px] lg:size-[20px]" src="./assets/icon/right-arrow.svg" alt="right arrow">
+                </button>
+            </div>
+
+            <h1 class="sm:max-w-[80%] md:max-w-[70%] mx-auto text-center text-white font-semibold sm:text-[40px] md:text-[40px] lg:text-[50px] sm:mt-10 md:mt-16 lg:mt-20">It is a long established fact that a reader will be distracted</h1>
+
+            <a href="./views/catalog.html" class="bg-white block w-fit font-medium mx-auto px-6 py-2 text-xs rounded-md mt-4">Shop now</a>
+        </div>
+    </header>
+    <main class="sm:w-[95%] md:w-[90%] mx-auto">
+        <!-- brands section -->
+        <section class="mt-[50px]">
+            <h1 class="text-primary font-semibold sm:text-xl md:text-2xl">Brands</h1>
+            <div class="mt-8 flex items-center justify-around sm:*:w-[30px] md:*:w-[45px]">
+                <img src="./assets/icon/channel.png" alt="channel logo">
+                <img src="./assets/icon/calvinklein.svg" alt="calvinklein logo">
+                <img src="./assets/icon/guess.png" alt="guess logo">
+                <img src="./assets/icon/gucci.png" alt="gucci logo">
+                <img src="./assets/icon/d&g.png" alt="D & G logo">
+                <img src="./assets/icon/adidas.png" alt="adidas logo">
+                <img src="./assets/icon/levis.png" alt="levi's logo">
+                <img src="./assets/icon/versace.svg" alt="versace logo">
+            </div>
+        </section>
+
+        <section class="mt-[100px]">
+            <h1 class="text-primary font-semibold sm:text-xl md:text-2xl mb-16">We provide best<br>customer experiences</h1>
+            <div class="grid md:grid-cols-3 gap-y-10">
+                <div class="px-6 sm:max-w-[250px] md:max-w-none">
+                    <span class="flex items-center justify-center bg-[#F2F4F7] rounded-md border size-[60px]">
+                        <img class="size-[40px] object-cover" src="./assets/icon/feature1.png" alt="feature image">
+                    </span>
+                    <h1 class="mt-4 font-medium">Original products</h1>
+                    <p class="mt-2 text-[#77889B] text-sm">We provide money back guarantee if the product isn’t original</p>
+                </div>
+                <div class="px-6 sm:max-w-[250px] md:max-w-none">
+                    <span class="flex items-center justify-center bg-[#F2F4F7] rounded-md border size-[60px]">
+                        <img class="size-[40px] object-cover" src="./assets/icon/feature2.png" alt="feature image">
+                    </span>
+                    <h1 class="mt-4 font-medium">Satisfaction</h1>
+                    <p class="mt-2 text-[#77889B] text-sm">Exchange the product you’ve purchased if it doesn’t fit on you</p>
+                </div>
+                <div class="px-6 sm:max-w-[250px] md:max-w-none">
+                    <span class="flex items-center justify-center bg-[#F2F4F7] rounded-md border size-[60px]">
+                        <img class="size-[40px] object-cover" src="./assets/icon/feature3.png" alt="feature image">
+                    </span>
+                    <h1 class="mt-4 font-medium">Fast & Free shipping</h1>
+                    <p class="mt-2 text-[#77889B] text-sm">We offer fast and free shipping to our loyal customers</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-[100px]">
+            <div class="flex justify-between">
+                <h1 class="text-primary font-semibold sm:text-xl md:text-2xl">Categories</h1>
+                <div class="flex gap-x-2">
+                    <button onclick="previousPageSubcategory()" class="block"><img class="sm:size-5 md:size-6" src="./assets/icon/left-arrow.svg" alt="left arrow"></button>
+                    <button onclick="nextPageSubcategory()" class="block"><img class="sm:size-5 md:size-6" src="./assets/icon/right-arrow.svg" alt="right arrow"></button>
+                </div>
+            </div>
+
+            <div id="subcategory-container" class="mt-10 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+        </section>
+
+        <section class="mt-[100px]">
+            <div class="flex items-center justify-between">
+                <h1 class="text-primary font-semibold sm:text-xl md:text-2xl">Top products</h1>
+                <a class="sm:text-xs md:text-sm font-medium" href="#">Discover All</a>
+            </div>
+            <div class="mt-6">
+                <div class="relative">
+                    <img class="w-full sm:h-[300px] md:h-[400px] object-cover" src="./assets/images/business.png" alt="category image">
+                    <div class="sm:w-full md:w-[calc(100%+40px)] h-fit absolute m-auto inset-0 md:left-[-20px] flex justify-between">
+                        <button id="previousTopProducts" class="rounded-full shadow-lg bg-white flex items-center justify-center w-10 h-10"><img class="size-5" src="./assets/icon/left-arrow.svg" alt=""></button>
+                        <button id="nextTopProducts" class="rounded-full shadow-lg bg-white flex items-center justify-center w-10 h-10"><img class="size-5" src="./assets/icon/right-arrow.svg" alt=""></button>
+                    </div>
+                </div>
+
+                <div id="topcontainer" class="w-[95%] mt-[-110px] relative mx-auto flex overflow-hidden gap-x-4"></div>
+            </div>
+        </section>
+
+        <section class="mt-[150px]">
+            <h1 class="text-center font-semibold text-2xl mx-auto md:max-w-[60%]">Subscribe to our newsletter to get updates to our latest collections</h1>
+            <p class="text-[#77889B] text-center text-sm mt-2">Get 20% off on your first order just by subscribing to our newsletter</p>
+            <div class="md:flex gap-x-2 w-fit mx-auto mt-6">
+                <div class="bg-[#F9FAFB] border border-[#F2F4F6] px-4 py-3 rounded-md flex items-center gap-x-2 sm:min-w-[320px] md:w-[400px]">
+                    <img class="size-5" src="./assets/icon/mail.svg" alt="mail icon">
+                    <input class="outline-none bg-transparent block w-full text-xs" type="email" placeholder="Enter your email">
+                </div>
+                <button class="block bg-primary px-4 py-2 text-white rounded-md text-sm sm:w-full md:w-auto sm:mt-2 md:mt-0">Subscribe</button>
+            </div>
+        </section>
+
+    </main>
+    <footer class="mt-[100px] bg-primary sm:px-[4rem] md:px-[4rem] lg:px-[5rem] pt-[3rem] pb-[1rem]">
+        <div class="md:flex md:gap-x-[80px] lg:gap-x-[100px] sm:w-fit mx-auto md:w-full">
+            <div class="md:w-[25%]">
+                <h1 class="text-white font-semibold text-xl">StyleFox</h1>
+                <p class="text-[#D7D7D7] mt-2 text-xs">Offers modern, affordable clothing for Men, Women, and Kids, perfect for everyday wear</p>
+            </div>
+            <div class="md:w-[75%] grid md:grid-cols-4 gap-y-6 sm:mt-6 md:mt-0">
+                <div>
+                    <h1 class="text-white font-medium text-base mb-3">Shop</h1>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">All products</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Men</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Women</a>
+                </div>
+                <div>
+                    <h1 class="text-white font-medium text-base mb-3">Company</h1>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">About us</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Contact</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Affiliates</a>
+                </div>
+                <div>
+                    <h1 class="text-white font-medium text-base mb-3">Support</h1>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">FAQs</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Cookie Policy</a>
+                    <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Terms of Use</a>
+                </div>
+                <div>
+                    <h1 class="text-white font-medium text-base mb-2">Payment</h1>
+                    <div class="flex items-center gap-x-1">
+                        <img class="bg-cover h-fit" src="./assets/icon/icmastercard.png" alt="mastercard icon">
+                        <img class="bg-cover h-fit" src="./assets/icon/icvisa.png" alt="visa icon">
+                        <img class="bg-cover h-fit" src="./assets/icon/icpaypal.png" alt="paypal icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="mt-10 mb-4">
+        <p class="text-center text-[#D7D7D7] text-xs">Copyright ©2024 stylefox. All right reserved</p>
+    </footer>
+    <script src="./js/global.js"></script>
+    <script src="./js/homecarrousel.js"></script>
+    <script src="./js/home.js"></script>
+</body>
+</html>
