@@ -64,7 +64,7 @@ const displayTopProducts = () => {
                 <img class="w-full sm:h-[220px] md:h-[300px]" src="${item.variants[0].images[0]}" alt="product image">
                 <div class="flex items-center justify-between">
                     <div>
-                        <p class="mt-2 text-sm font-medium">${item.title.length > 14 ? item.title.slice(0, 14)+'...' : item.title }</p>
+                        <h1 class="mt-2 text-sm font-medium" title="${item.title}"><a href="/views/Details.html?page=${item.id}">${item.title.length > 14 ? item.title.slice(0, 14)+'...' : item.title }</a></h1>
                         <span class="font-semibold mt-2">${item.variants[0].price}$</span>
                     </div>
                     <div productid="${item.id}" class="addtocart bg-primary rounded-md px-2 py-2 flex items-center justify-center cursor-pointer">
@@ -134,4 +134,14 @@ open.addEventListener('click', () => {
 close.addEventListener('click', () => {
     menu.style.transition = 'right 700ms ease-in'
     menu.style.right = '-80%'
+})
+
+//newsletter
+const emailForm = document.getElementById('newsletter')
+const emailInput = document.getElementById('email')
+
+emailForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    alert('Your email is submitted to our newsletter.')
+    emailInput.value = ''
 })
