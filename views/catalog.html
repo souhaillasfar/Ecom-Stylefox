@@ -3,43 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="StyleFox is an online store offering modern and affordable clothing for men, women, and children. The site features a clear, responsive interface with product filters and a newsletter subscription option for discounts. It accepts multiple payment methods, including MasterCard, PayPal, and Visa.">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="fashion, clothing, online shopping, trendy clothes, affordable fashion, men's clothing, women's clothing, kids' clothing, accessories">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
         <link rel="stylesheet" href="./../css/output.css">
     <title>StyleFox</title>
 </head>
 <body>
   
     <header>
-        <div class="bg-[#1D242D] text-white font-poppins w-full h-6 py-3 flex items-center justify-center">
-            <p class="text-white text-center text-xs">Sign up and <span class="font-semibold">GET 20% FOR</span> your first order.  <a href="#" class="font-semibold">Sign up now</a></p>
-        </div>
-        <nav class="flex items-center justify-between px-[8%] py-2 navshdaow">
-            <img class="w-[80px]" src="/assets/icon/logo 3.png" alt="logo">
+      <div class="bg-primary py-3">
+        <p class="text-white text-center text-xs">Sign up and <span class="font-semibold">GET 20% FOR</span> your first order.  <a href="#" class="font-semibold">Sign up now</a></p>
+    </div>
+    <nav class="flex items-center justify-between sm:px-[5%] lg:px-[8%] py-2 navshdaow">
+        <img class="w-[80px]" src="/assets/icon/logo_black.png" alt="logo">
 
-            <ul class="flex items-center text-sm gap-4">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="catalog.html">Catalog</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-                <li class="ml-8">
-                   <a href="shop.html"> <img class="size-5" src="/assets/icon/cart.svg" alt="cart icon"></a>
-                </li>
-                <li>
-                    <a href="#"><img class="size-5" src="/assets/icon/user.svg" alt="user icon"></a>
-                </li>
-            </ul>
-        </nav>
+        <ul class="flex items-center text-sm sm:gap-2 md:gap-4">
+            <li>
+                <a class="sm:hidden md:block" href="/index.html">Home</a>
+            </li>
+            <li>
+                <a class="sm:hidden md:block" href="/views/catalog.html">Catalog</a>
+            </li>
+            <li>
+                <a class="sm:hidden md:block" href="/views/About.html">About</a>
+            </li>
+            <li>
+                <a class="sm:hidden md:block" href="#">Contact</a>
+            </li>
+            <li id="openShopping" class="ml-8">
+                <img class="size-5 cursor-pointer" src="/assets/icon/cart.svg" alt="cart icon">
+            </li>
+            <li>
+                <a href="#" class="sm:hidden md:block"><img class="size-5" src="/assets/icon/user.svg" alt="user icon"></a>
+            </li>
+            <li id="home-burger">
+                <img class="size-5 block md:hidden cursor-pointer" src="/assets/icon/menu.svg" alt="burdermenu icon">
+            </li>
+        </ul>
+
+        <div id="mobilemenu" class="sm:block md:hidden fixed w-[80%] h-full top-0 right-[-80%] px-4 py-10 bg-primary text-white z-10">
+            <div class="flex justify-end">
+                <i id="close-burger" class="fa-solid fa-x home-close block text-[20px] cursor-pointer"></i>
+            </div>
+            <div class="*:block *:text-center *:py-4 *:text-xl *:font-light mt-6">
+                <a href="/index.html">Home</a>
+                <a href="/views/catalog.html">Catalog</a>
+                <a href="/views/About.html">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Login</a>
+            </div>
+        </div>
+    </nav>
     </header>
     
 
@@ -76,50 +93,100 @@
          <input type="email" id="email" placeholder="Enter your email" class="bg-white border border-gray-300 text-gray-900 md:w-64 mb-2 md:mb-0 md:me-4 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
          <button type="submit" class=" text-white bg-[#1D242D] hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-48  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Subscribe</button>
     </div>
-
-
-    <footer class="bg-[#1D242D] text-white font-poppins w-full h-auto py-8">
-        <form class="px-4 sm:px-8 md:px-10 lg:px-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
-          <div>
-            <h2 class="text-xl">StyleFox</h2>
-            <p class="mt-4 text-xs text-[#D7D7D7]">
-              Offers modern, <br>affordable clothing for Men, <br>Women, and Kids, perfect for everyday wear.
-            </p>
-          </div>
-          <div>
-            <h2 class="text-l">Shop</h2>
-            <p class="mt-4 text-xs text-[#D7D7D7]">
-              All products <br> Men <br> Women
-            </p>
-          </div>
-          <div>
-            <h2 class="text-l">Company</h2>
-            <p class="mt-4 text-xs text-[#D7D7D7]">
-              About us <br> Contact <br> Affiliates
-            </p>
-          </div>
-          <div>
-            <h2 class="text-l">Support</h2>
-            <p class="mt-4 text-xs text-[#D7D7D7]">
-              FAQs <br> Cookie Policy <br> Terms of Use
-            </p>
-          </div>
-          <div>
-            <h2 class="text-l">Payment</h2>
-            <div class="flex mt-2 gap-4">
-              <img src="/assets/icon/mastercard.png" alt="mastercard" class="h-6">
-              <img src="/assets/icon/paypal.png" alt="paypal" class="h-6">
-              <img src="/assets/icon/visa-logo.png" alt="visa-logo" class="h-6">
+    <div id="shopping" class="fixed inset-0 z-50 overflow-hidden hidden">
+      <div class="fixed inset-0 bg-black bg-opacity-50"></div>
+      
+      <div class="fixed inset-0 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+          <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full">
+            <div class="pointer-events-auto w-screen max-w-md">
+              <div class="flex h-full flex-col bg-white shadow-xl">
+                <!-- Header -->
+                <div class="bg-black px-4 py-6 sm:px-6">
+                  <div class="flex items-center justify-between">
+                    <h2 class="text-lg font-medium text-white">Shopping Cart</h2>
+                    <button id="closeShopping" class="text-white hover:text-gray-300">
+                      <span class="sr-only">Close panel</span>
+                      <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+  
+                <div class="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
+                  <div id="cartItems">
+                    <!-- Cart items will be inserted here -->
+                  </div>
+                </div>
+  
+                <!-- Subtotal -->
+                <div class="subtotal flex justify-between text-base font-medium bg-black px-4 py-6 sm:px-6 text-white">
+                  <p>Subtotal</p>
+                  <p id="subtotalAmount">$0.00</p>
+                </div>
+  
+                <!-- Buttons -->
+                <div class="border-t border-red-200 px-4 py-6 sm:px-6 bg-black">
+                  <div class="flex gap-2">
+                    <button id="devisButton" class="w-full bg-black border border-gray-300 rounded-lg text-white px-6 py-1 text-base font-medium hover:bg-gray-900">
+                          Devis
+                    </button>
+                    <button class="w-full bg-white text-black border-gray-300 rounded-lg px-6 text-base font-medium hover:bg-gray-50">
+                          Confirm
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </form>
-        <div class="border-t border-[#D7D7D7] my-6 mx-auto w-[80%]"></div>
-        <p class="font-poppins text-center text-xs text-[#D7D7D7]">
-          Copyright ©2024 stylefox. All rights reserved.
-        </p>
+        </div>
+      </div>
+    </div> 
+
+    <footer class="mt-[100px] bg-primary sm:px-[4rem] md:px-[4rem] lg:px-[5rem] pt-[3rem] pb-[1rem]">
+      <div class="md:flex md:gap-x-[80px] lg:gap-x-[100px] sm:w-fit mx-auto md:w-full">
+          <div class="md:w-[25%]">
+              <h1 class="text-white font-semibold text-xl">StyleFox</h1>
+              <p class="text-[#D7D7D7] mt-2 text-xs">Offers modern, affordable clothing for Men, Women, and Kids, perfect for everyday wear</p>
+          </div>
+          <div class="md:w-[75%] grid md:grid-cols-4 gap-y-6 sm:mt-6 md:mt-0">
+              <div>
+                  <h1 class="text-white font-medium text-base mb-3">Shop</h1>
+                  <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="/views/catalog.html">All products</a>
+                  <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="/views/catalog.html">Men</a>
+                  <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="/views/catalog.html">Women</a>
+              </div>
+              <div>
+                  <h1 class="text-white font-medium text-base mb-3">Company</h1>
+                  <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="/views/About.html">About us</a>
+                  <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Contact</a>
+                  <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Affiliates</a>
+              </div>
+              <div>
+                  <h1 class="text-white font-medium text-base mb-3">Support</h1>
+                  <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">FAQs</a>
+                  <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Cookie Policy</a>
+                  <a class="w-fit text-[#D7D7D7] block text-[13px] mb-1" href="#">Terms of Use</a>
+              </div>
+              <div>
+                  <h1 class="text-white font-medium text-base mb-2">Payment</h1>
+                  <div class="flex items-center gap-x-1">
+                      <img class="bg-cover h-fit" src="/assets/icon/icmastercard.png" alt="mastercard icon">
+                      <img class="bg-cover h-fit" src="/assets/icon/icvisa.png" alt="visa icon">
+                      <img class="bg-cover h-fit" src="/assets/icon/icpaypal.png" alt="paypal icon">
+                  </div>
+              </div>
+          </div>
+      </div>
+      <hr class="mt-10 mb-4">
+      <p class="text-center text-[#D7D7D7] text-xs">Copyright ©2024 stylefox. All right reserved</p>
       </footer>
       <script src="/js/global.js"></script>
 <script src="/js/catalog.js"></script>
+<script src="./js/home.js"></script>
+<script src="./js/shop.js"></script>
+<script src="./js/invoice.js"></script>
 
 </body>
 </html>

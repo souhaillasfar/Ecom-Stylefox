@@ -163,7 +163,7 @@ function filterBySize() {
 }
 
 //  la pagination
-const productsPerPage = 6; 
+const productsPerPage = 12; 
 let currentPage = 1; 
 let totalPages = 1; 
 let allProducts = []; 
